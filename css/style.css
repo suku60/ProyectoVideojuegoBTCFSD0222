@@ -1,0 +1,148 @@
+body {
+    margin: 1em;
+    padding: 5%;
+
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+/* ROBOT(S) */
+
+.container_robot {
+    
+    background-color: transparent;
+
+    margin: 0em;
+    padding: 0%;
+
+    height: 5em;
+    width: 5em;
+
+
+}
+
+.container_robot_upperpart {
+
+    
+    background-color: transparent;
+
+    height: inherit;
+    width: inherit;
+
+}
+
+.container_robot_groundpart {
+
+    
+    background-color: transparent;
+    
+    height: inherit;
+    width: inherit;
+}
+
+.container_robot_upperpart_1 {
+
+    
+    background-color: transparent;
+
+    height: inherit;
+    width: 1em;
+
+}
+
+
+/* ROBOT: BODY AND CANNON */
+
+.container_robot_upperpart_2 {
+
+    
+    background-color: transparent;
+
+    height: inherit;
+    width: 3em;
+
+}
+
+/* CANNON */
+
+.container_robot_upperpart_2_1 {
+
+    
+    background-color: transparent;
+    
+    height: 1em;
+    width: inherit;
+
+}
+
+.container_robot_upperpart_2_1_1 {
+
+    
+    background-color: transparent;
+
+    height: inherit;
+    width: 1em;
+}
+
+/* BARREL */
+
+/* LEAVE FOR NOW / DEVELOP LATER */
+
+.container_robot_upperpart_2_1_2 {
+
+    background-color: lightsalmon;
+
+    height: inherit;
+    width: 1em;
+
+    border-radius: 0% 0% 30% 30%;
+}
+
+
+.container_robot_upperpart_2_1_3 {
+
+    
+    background-color: transparent;
+
+    height: inherit;
+    width: 1em;
+}
+
+/* BODY */
+
+.container_robot_upperpart_2_2 {
+
+    background-color: lightblue;
+    
+    height: 3em;
+    width: inherit;
+
+    border-radius: 50% 50% 50% 50%;
+
+}
+
+.container_robot_upperpart_2_3 {
+
+    
+    background-color: transparent;
+    
+    height: 1em;
+    width: inherit;
+}
+
+
+.container_robot_upperpart_3 {
+
+    
+    background-color: transparent;
+
+    height: inherit;
+    width: 1em;
+
+}
