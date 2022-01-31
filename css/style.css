@@ -24,9 +24,7 @@ body {
     height: 5em;
     width: 5em;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 
 
 }
@@ -44,6 +42,9 @@ body {
 
     display: flex;
     flex-direction: row;
+
+    z-index: 100;
+    position: absolute;
 
 }
 
@@ -102,13 +103,42 @@ body {
 
 .container_robot_upperpart_2_1_2 {
 
-    background-color: lightsalmon;
+    background-color: transparent;
 
     height: inherit;
     width: 1em;
 
+    display: flex;
+    flex-direction: column;
+}
+
+.container_robot_upperpart_2_1_2_1 {
+
+    background-color: transparent;
+
+    height: 0.3em;
+    width: inherit;
+}
+
+.container_robot_upperpart_2_1_2_2 {
+
+    background-color: lightsalmon;
+
+    height: 0.3em;
+    width: inherit;
+}
+
+.container_robot_upperpart_2_1_2_3 {
+
+    background-color: lightsalmon;
+
+    height: 0.4em;
+    width: inherit;
+
     border-radius: 0% 0% 50% 50%;
 }
+
+
 
 
 .container_robot_upperpart_2_1_3 {
@@ -162,4 +192,63 @@ body {
     
     height: inherit;
     width: inherit;
+
+    display: flex;
+    flex-direction: row;
+}
+
+/* LEFT WHEEL */
+
+.container_robot_groundpart_1 {
+    background-color: lightskyblue;
+    
+    height: inherit;
+    width: 2em;
+
+    border-radius: 11% 0% 0% 11%;
+}
+
+/* BASE */
+
+.container_robot_groundpart_2 {
+    background-color: transparent;
+    
+    height: inherit;
+    width: 1em;
+
+    display: flex;
+    flex-direction: column;
+
+}
+.container_robot_groundpart_2_1 {
+    background-color: transparent;
+
+    height: 0.3em;
+    width: inherit;
+
+}
+.container_robot_groundpart_2_2 {
+    background-color: lightsteelblue;
+
+    height: 4.4em;
+    width: inherit;
+
+}
+.container_robot_groundpart_2_3 {
+    background-color: transparent;
+
+    height: 0.3em;
+    width: inherit;
+
+}
+
+/* RIGHT WHEEL */
+
+.container_robot_groundpart_3 {
+    background-color: lightskyblue;
+    
+    height: inherit;
+    width: 2em;
+
+    border-radius: 0% 11% 11% 0%;
 }
