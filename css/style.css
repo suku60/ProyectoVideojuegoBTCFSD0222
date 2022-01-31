@@ -32,6 +32,11 @@ body {
 
 }
 
+.container_robot:hover {
+
+    opacity: 80%;
+}
+
 
 /* ROBOT: BODY AND CANNON */
 
