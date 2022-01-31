@@ -309,7 +309,7 @@ body {
     height: inherit;
     width: 2em;
 
-    border-radius: 11% 0% 0% 11%;
+    border-radius: 15% 0% 0% 15%;
 }
 
 /* BASE */
@@ -354,5 +354,5 @@ body {
     height: inherit;
     width: 2em;
 
-    border-radius: 0% 11% 11% 0%;
+    border-radius: 0% 15% 15% 0%;
 }

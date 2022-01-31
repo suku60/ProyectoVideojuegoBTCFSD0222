@@ -2,6 +2,12 @@
 
 ### Descripción del proyecto // _Proyect description_
 
+<!-- puntos realizados:
+- Robot creado a base de divs y dándoles estilos con el css
+- 
+-
+ -->
+
 
 
 ### Cómo ejecutar el proyecto // _How to run_
