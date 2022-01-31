@@ -1,4 +1,7 @@
 body {
+
+    background-color: lightslategrey    ;
+    
     margin: 1em;
     padding: 5%;
 
@@ -142,7 +145,7 @@ body {
 }
 .container_robot_upperpart_2_1_2_2_2 {
 
-    background-color: lightsalmon;
+    background-color: lightcyan;
 
     height: inherit;
     width: 0.6em;
@@ -180,7 +183,7 @@ body {
 }
 .container_robot_upperpart_2_1_2_3_2 {
 
-    background-color: lightsalmon;
+    background-color: lightcyan;
 
     height: inherit;
     width: 0.6em;
@@ -214,12 +217,53 @@ body {
 
 .container_robot_upperpart_2_2 {
 
-    background-color: lightsalmon;
+    background-color: lightcyan;
     
     height: 3em;
     width: inherit;
 
     border-radius: 50% 50% 50% 50%;
+
+    display: flex;
+    flex-direction: row;
+
+    position: relative
+
+}
+
+.container_robot_upperpart_2_2_1 {
+
+    background-color: transparent;
+
+    height: inherit;
+    width: 0.5em;
+    
+
+}
+
+.container_robot_upperpart_2_2_2 {
+
+    background-color: lightgrey;
+
+    height: 2.5em;
+
+    /* there is a 0.5 empty space here  and still works */
+
+    width: 2em;
+
+    border-radius: 0% 0% 50% 50%;
+
+    
+
+}
+
+.container_robot_upperpart_2_2_3 {
+
+    background-color: transparent;
+
+    height: inherit;
+    width: 0.5em;
+    
 
 }
 
@@ -260,7 +304,7 @@ body {
 /* LEFT WHEEL */
 
 .container_robot_groundpart_1 {
-    background-color: lightskyblue;
+    background-color: darkgray;
     
     height: inherit;
     width: 2em;
@@ -288,7 +332,7 @@ body {
 
 }
 .container_robot_groundpart_2_2 {
-    background-color: lightsteelblue;
+    background-color: darkred;
 
     height: 4.4em;
     width: inherit;
@@ -305,7 +349,7 @@ body {
 /* RIGHT WHEEL */
 
 .container_robot_groundpart_3 {
-    background-color: lightskyblue;
+    background-color: darkgray;
     
     height: inherit;
     width: 2em;
