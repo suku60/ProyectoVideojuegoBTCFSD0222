@@ -24,8 +24,15 @@ body {
     height: 5em;
     width: 5em;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 
 }
+
+
+/* ROBOT: BODY AND CANNON */
 
 .container_robot_upperpart {
 
@@ -35,16 +42,11 @@ body {
     height: inherit;
     width: inherit;
 
+    display: flex;
+    flex-direction: row;
+
 }
 
-.container_robot_groundpart {
-
-    
-    background-color: transparent;
-    
-    height: inherit;
-    width: inherit;
-}
 
 .container_robot_upperpart_1 {
 
@@ -56,9 +58,6 @@ body {
 
 }
 
-
-/* ROBOT: BODY AND CANNON */
-
 .container_robot_upperpart_2 {
 
     
@@ -66,6 +65,10 @@ body {
 
     height: inherit;
     width: 3em;
+
+    display: flex;
+    flex-direction: column;
+
 
 }
 
@@ -78,6 +81,9 @@ body {
     
     height: 1em;
     width: inherit;
+
+    display: flex;
+    flex-direction: row;
 
 }
 
@@ -101,7 +107,7 @@ body {
     height: inherit;
     width: 1em;
 
-    border-radius: 0% 0% 30% 30%;
+    border-radius: 0% 0% 50% 50%;
 }
 
 
@@ -118,7 +124,7 @@ body {
 
 .container_robot_upperpart_2_2 {
 
-    background-color: lightblue;
+    background-color: lightsalmon;
     
     height: 3em;
     width: inherit;
@@ -145,4 +151,15 @@ body {
     height: inherit;
     width: 1em;
 
+}
+
+/* ROBOT: WHEELS AND BASE */
+
+
+.container_robot_groundpart {
+
+    background-color: transparent;
+    
+    height: inherit;
+    width: inherit;
 }
