@@ -110,13 +110,14 @@ body {
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .container_robot_upperpart_2_1_2_1 {
 
     background-color: transparent;
 
-    height: 0.3em;
+    height: 0.005em;
     width: inherit;
 }
 
@@ -124,7 +125,7 @@ body {
 
     background-color: lightsalmon;
 
-    height: 0.3em;
+    height: 0.55em;
     width: inherit;
 }
 
@@ -135,7 +136,7 @@ body {
     height: 0.4em;
     width: inherit;
 
-    border-radius: 0% 0% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
 }
 
 
