@@ -292,6 +292,165 @@ body {
 
 }
 
+/* SIDE CANNON */
+
+.container_robot_upperpart_sidecannon {
+
+    background-color: transparent;
+
+    height: inherit;
+    width: inherit;
+
+    display: flex;
+    flex-direction: column;
+
+    
+    z-index: 110;
+    position: absolute;
+}
+
+.container_robot_upperpart_sidecannon_1 {
+
+    background-color: transparent;
+
+    height: 1.8em;
+    width: inherit;
+
+
+
+}
+
+.container_robot_upperpart_sidecannon_2 {
+
+    background-color: transparent;
+
+    height: 1.4em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+
+
+
+}
+
+.container_robot_upperpart_sidecannon_2_1 {
+
+    background-color: transparent;
+
+    height: inherit;
+    width: 2.5em;
+
+    
+
+}
+
+.container_robot_upperpart_sidecannon_2_2 {
+
+    background-color: transparent;
+
+    height: inherit;
+    width: 2.5em;
+
+    display: flex;
+    flex-direction: inherit;
+
+}
+ 
+/* SIDE CANNON BODY */
+
+.container_robot_upperpart_sidecannon_2_2_1 {
+
+    background-color: crimson;
+
+    height: inherit;
+    width: 1.4em;
+
+    border-radius: 50% 0% 0% 50%;
+}
+
+
+.container_robot_upperpart_sidecannon_2_2_2 {
+
+    background-color: transparent;
+
+    height: inherit;
+    width: 1.1em;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+ /* SIDE BARRELS */
+
+
+.container_robot_upperpart_sidecannon_2_2_2_7 {
+    background-color: transparent;
+
+    height: 0.2em;
+    width: inherit;
+}
+
+.container_robot_upperpart_sidecannon_2_2_2_7 {
+    background-color: crimson;
+
+    height: 0.2em;
+    width: inherit;
+
+    border-radius: 50% 0% 0% 50%;
+}
+
+.container_robot_upperpart_sidecannon_2_2_2_7 {
+    background-color: transparent;
+
+    height: 0.2em;
+    width: inherit;
+}
+
+.container_robot_upperpart_sidecannon_2_2_2_7 {
+    background-color: crimson;
+
+    height: 0.2em;
+    width: inherit;
+
+    border-radius: 50% 0% 0% 50%;
+}
+
+.container_robot_upperpart_sidecannon_2_2_2_7 {
+    background-color: transparent;
+
+    height: 0.2em;
+    width: inherit;
+}
+
+.container_robot_upperpart_sidecannon_2_2_2_7 {
+    background-color: crimson;
+
+    height: 0.2em;
+    width: inherit;
+
+    border-radius: 50% 0% 0% 50%;
+}
+
+.container_robot_upperpart_sidecannon_2_2_2_7 {
+    background-color: transparent;
+
+    height: 0.2em;
+    width: inherit;
+} 
+
+.container_robot_upperpart_sidecannon_3 {
+
+    background-color: transparent;
+
+    height: 1.8em;
+    width: inherit;
+
+
+
+}
+
 /* ROBOT: WHEELS AND BASE */
 
 
