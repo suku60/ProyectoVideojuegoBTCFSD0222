@@ -361,7 +361,7 @@ body {
 
 .container_robot_upperpart_sidecannon_2_2_1 {
 
-    background-color: gray;
+    background-color: darkred;
 
     height: inherit;
     width: 1.4em;
@@ -393,8 +393,7 @@ body {
 }
 
 .container_robot_upperpart_sidecannon_2_2_2_2 {
-    background-color: gray;
-    opacity: 90%;
+    background-color: lightsteelblue;
 
     height: 0.2em;
     width: inherit;
@@ -410,8 +409,7 @@ body {
 }
 
 .container_robot_upperpart_sidecannon_2_2_2_4 {
-    background-color: gray;
-    opacity: 90%;
+    background-color: transparent;
 
     height: 0.2em;
     width: inherit;
@@ -427,8 +425,7 @@ body {
 }
 
 .container_robot_upperpart_sidecannon_2_2_2_6 {
-    background-color: gray;
-    opacity: 90%;
+    background-color: lightsteelblue;
 
     height: 0.2em;
     width: inherit;
