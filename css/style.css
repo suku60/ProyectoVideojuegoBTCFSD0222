@@ -28,8 +28,8 @@ body {
     width: 5em;
 
     position: relative;
-
-
+    
+    
 }
 
 .container_robot:hover {
@@ -361,7 +361,7 @@ body {
 
 .container_robot_upperpart_sidecannon_2_2_1 {
 
-    background-color: darkred;
+    background-color: gray;
 
     height: inherit;
     width: 1.4em;
@@ -393,7 +393,8 @@ body {
 }
 
 .container_robot_upperpart_sidecannon_2_2_2_2 {
-    background-color: crimson;
+    background-color: gray;
+    opacity: 90%;
 
     height: 0.2em;
     width: inherit;
@@ -409,7 +410,8 @@ body {
 }
 
 .container_robot_upperpart_sidecannon_2_2_2_4 {
-    background-color: crimson;
+    background-color: gray;
+    opacity: 90%;
 
     height: 0.2em;
     width: inherit;
@@ -425,7 +427,8 @@ body {
 }
 
 .container_robot_upperpart_sidecannon_2_2_2_6 {
-    background-color: crimson;
+    background-color: gray;
+    opacity: 90%;
 
     height: 0.2em;
     width: inherit;
@@ -468,7 +471,7 @@ body {
 /* LEFT WHEEL */
 
 .container_robot_groundpart_1 {
-    background-color: darkgray;
+    background-color: darkslategray;
     
     height: inherit;
     width: 2em;
@@ -513,7 +516,7 @@ body {
 /* RIGHT WHEEL */
 
 .container_robot_groundpart_3 {
-    background-color: darkgray;
+    background-color: darkslategray;
     
     height: inherit;
     width: 2em;
