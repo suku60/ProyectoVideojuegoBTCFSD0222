@@ -36,4 +36,17 @@ const switchScreen = (screenNumber) => {
 
 }
 
-/* selectCar is a constant that we create */
+/* selectCar is a constant that we create for the team selection screen, which allow us to include the robots
+inside them */
+
+const selectRobot = (numberRobot) => {
+    if(team1 == ""){
+        team1 = allRobots[numberRobot];
+        let firstRobot = document.getElementById(numberRobot)
+        let robotData = document.getElementById("data" + 1);
+        firstRobot.onclick = "";
+        firstRobot.classList.add("Selected_Robot");
+        robotData.innerHTML = `${team1.fabrication}`;
+
+    } else if ( )
+}
