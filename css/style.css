@@ -52,7 +52,7 @@ body {
 }
 
 .navbar_2 {
-    background-color: lightgray;
+    background-color: whitesmoke;
 
     height: 4em;
     width: 54em;
@@ -73,6 +73,10 @@ body {
 
     align-items: center;
     justify-content: center;
+
+    transform: rotateX(160deg);
+    
+    transform: rotateY(160deg);
 
 }
 
@@ -313,7 +317,7 @@ body {
 }
 
 .navbar_title_J_2_1_1 {
-    background-color: lightgray;
+    background-color: whitesmoke;
 
     height: 1em;
     width: 1em;
@@ -362,7 +366,7 @@ body {
 /* LETTER K */
 
 .navbar_title_K {
-    background-color: red;
+    background-color: transparent;
 
     height: inherit;
     width: 3em;
@@ -498,14 +502,38 @@ body {
     width: 1em;
 }
 
+/* ELEMENT => : */
+
 .navbar_title_twopoints {
-    background-color: red;
+    background-color: transparent;
 
     height: inherit;
     width: 3em;
 
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+}
+
+.navbar_title_twopoints_1 {
+    background-color: black;
+
+    height: 1em;
+    width: 1em;
+
+    border-radius: 40% 20% 44% 50%;
+
+}
+.navbar_title_twopoints_2 {
+    background-color: black;
+
+    height: 1em;
+    width: 1em;
+
+    border-radius: 44% 50% 40% 20%;
 
 }
 
@@ -520,8 +548,10 @@ body {
 
 }
 
+/* LETTER B */
+
 .navbar_title_B {
-    background-color: red;
+    background-color: transparent;
 
     height: inherit;
     width: 3em;
@@ -530,6 +560,35 @@ body {
     flex-direction: column;
 
 }
+
+.navbar_title_B_1 {
+    background-color: transparent;
+    
+    height: 2em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.navbar_title_B_1_1 {
+    background-color: black;
+
+    height: inherit;
+    width: 2.1em;
+
+    border-radius: 0% 50% 50% 0%;
+
+}
+.navbar_title_B_1_2 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 0.5em;
+
+}
+
 
 .navbar_title_S {
     background-color: transparent;
@@ -542,19 +601,104 @@ body {
 
 }
 
-.navbar_title_I {
-    background-color: red;
+.navbar_title_S_1 {
+    background-color: transparent;
+    
+    height: 2em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+.navbar_title_S_1_1 {
+    background-color: black;
 
     height: inherit;
-    width: 3em;
+    width: 2em;
+
+    border-radius: 0% 50% 50% 0%;
 
     display: flex;
     flex-direction: column;
 
 }
 
+.navbar_title_S_1_1_1 {
+    background-color: whitesmoke;
+
+    
+    height: 0;
+    width: 0;
+
+  border-left: 0.5em solid transparent;
+  border-right: 0em solid transparent;
+  border-top: 0.5em solid black;
+}
+
+.navbar_title_S_1_1_2 {
+    background-color: whitesmoke;
+
+    height: 1em;
+    width: 1em;
+
+    border-radius: 0% 50% 50% 0%;
+}
+
+.navbar_title_S_1_2 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 0.1em;
+
+}
+
+#reverse {
+    
+    transform: rotateY(-180deg);
+    transform: rotateZ(-180deg);
+    
+    
+}
 
 
+/* LETTER I: this one has a flex-direction row instead of column */
+
+.navbar_title_I {
+    background-color: transparent;
+
+    height: inherit;
+    width: 3em;
+
+    display: flex;
+    flex-direction: row;
+
+}
+.navbar_title_I_1 { 
+    background-color: transparent;
+
+    height: inherit;
+    width: 1em;
+
+}
+.navbar_title_I_2 { 
+    background-color: black;
+
+    height: inherit;
+    width: 1em;
+
+}
+.navbar_title_I_3 { 
+    background-color: transparent;
+
+    height: inherit;
+    width: 1em;
+
+}
+
+/* END OF THE LETTERS */
 
 .navbar_3 {
     background-color: blue;
