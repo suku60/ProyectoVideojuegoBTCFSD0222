@@ -39,7 +39,7 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    
+
 
 }
 
@@ -57,7 +57,91 @@ body {
     height: 4em;
     width: 54em;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+
+
 }
+
+/* TITLE PROJECT:ROBOSTRIKE */
+
+
+.navbar_title_1 {
+    background-color: grey;
+
+}
+
+.navbar_title_2 {
+
+}
+
+.navbar_title_3 {
+
+}
+
+.navbar_title_4 {
+
+}
+
+.navbar_title_5 {
+
+}
+
+.navbar_title_6 {
+
+}
+
+.navbar_title_7 {
+
+}
+
+.navbar_title_8 {
+
+}
+
+.navbar_title_9 {
+
+}
+
+.navbar_title_10 {
+
+}
+
+.navbar_title_11 {
+
+}
+
+.navbar_title_12 {
+
+}
+
+.navbar_title_13 {
+
+}
+
+.navbar_title_14 {
+
+}
+
+.navbar_title_15 {
+
+}
+
+.navbar_title_16 {
+
+}
+
+.navbar_title_17 {
+
+}
+
+.navbar_title_18 {
+
+}
+
+
 
 .navbar_3 {
     background-color: blue;
@@ -70,7 +154,7 @@ body {
 /* ROBOT CLASS */
 
 .container_robot {
-    
+
     background-color: transparent;
 
     margin: 1em;
@@ -80,8 +164,8 @@ body {
     width: 5em;
 
     position: relative;
-    
-    
+
+
 }
 
 .container_robot:hover {
@@ -94,7 +178,7 @@ body {
 
 .container_robot_upperpart {
 
-    
+
     background-color: transparent;
 
     height: inherit;
@@ -106,14 +190,14 @@ body {
     z-index: 100;
     position: absolute;
 
-    
+
 
 }
 
 
 .container_robot_upperpart_1 {
 
-    
+
     background-color: transparent;
 
     height: inherit;
@@ -123,7 +207,7 @@ body {
 
 .container_robot_upperpart_2 {
 
-    
+
     background-color: transparent;
 
     height: inherit;
@@ -139,9 +223,9 @@ body {
 
 .container_robot_upperpart_2_1 {
 
-    
+
     background-color: transparent;
-    
+
     height: 1em;
     width: inherit;
 
@@ -152,7 +236,7 @@ body {
 
 .container_robot_upperpart_2_1_1 {
 
-    
+
     background-color: transparent;
 
     height: inherit;
@@ -193,6 +277,7 @@ body {
     flex-direction: row;
 
 }
+
 .container_robot_upperpart_2_1_2_2_1 {
 
     background-color: transparent;
@@ -202,6 +287,7 @@ body {
 
 
 }
+
 .container_robot_upperpart_2_1_2_2_2 {
 
     background-color: lightcyan;
@@ -211,6 +297,7 @@ body {
 
 
 }
+
 .container_robot_upperpart_2_1_2_2_3 {
 
     background-color: transparent;
@@ -231,6 +318,7 @@ body {
     display: flex;
     flex-direction: row;
 }
+
 .container_robot_upperpart_2_1_2_3_1 {
 
     background-color: transparent;
@@ -240,6 +328,7 @@ body {
 
 
 }
+
 .container_robot_upperpart_2_1_2_3_2 {
 
     background-color: lightcyan;
@@ -251,6 +340,7 @@ body {
 
 
 }
+
 .container_robot_upperpart_2_1_2_3_3 {
 
     background-color: transparent;
@@ -265,7 +355,7 @@ body {
 
 .container_robot_upperpart_2_1_3 {
 
-    
+
     background-color: transparent;
 
     height: inherit;
@@ -277,7 +367,7 @@ body {
 .container_robot_upperpart_2_2 {
 
     background-color: lightcyan;
-    
+
     height: 3em;
     width: inherit;
 
@@ -287,7 +377,6 @@ body {
     flex-direction: row;
 
     position: relative
-
 }
 
 .container_robot_upperpart_2_2_1 {
@@ -296,7 +385,7 @@ body {
 
     height: inherit;
     width: 0.5em;
-    
+
 
 }
 
@@ -312,7 +401,7 @@ body {
 
     border-radius: 0% 0% 50% 50%;
 
-    
+
 
 }
 
@@ -322,15 +411,15 @@ body {
 
     height: inherit;
     width: 0.5em;
-    
+
 
 }
 
 .container_robot_upperpart_2_3 {
 
-    
+
     background-color: transparent;
-    
+
     height: 1em;
     width: inherit;
 }
@@ -338,7 +427,7 @@ body {
 
 .container_robot_upperpart_3 {
 
-    
+
     background-color: transparent;
 
     height: inherit;
@@ -358,7 +447,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    
+
     z-index: 110;
     position: absolute;
 }
@@ -395,7 +484,7 @@ body {
     height: inherit;
     width: 2.5em;
 
-    
+
 
 }
 
@@ -410,7 +499,7 @@ body {
     flex-direction: inherit;
 
 }
- 
+
 /* SIDE CANNON BODY */
 
 .container_robot_upperpart_sidecannon_2_2_1 {
@@ -436,7 +525,7 @@ body {
 
 }
 
- /* SIDE BARRELS */
+/* SIDE BARRELS */
 
 
 .container_robot_upperpart_sidecannon_2_2_2_1 {
@@ -492,7 +581,7 @@ body {
 
     height: 0.2em;
     width: inherit;
-} 
+}
 
 .container_robot_upperpart_sidecannon_3 {
 
@@ -511,7 +600,7 @@ body {
 .container_robot_groundpart {
 
     background-color: transparent;
-    
+
     height: inherit;
     width: inherit;
 
@@ -523,7 +612,7 @@ body {
 
 .container_robot_groundpart_1 {
     background-color: darkslategray;
-    
+
     height: inherit;
     width: 2em;
 
@@ -534,7 +623,7 @@ body {
 
 .container_robot_groundpart_2 {
     background-color: transparent;
-    
+
     height: inherit;
     width: 1em;
 
@@ -542,6 +631,7 @@ body {
     flex-direction: column;
 
 }
+
 .container_robot_groundpart_2_1 {
     background-color: transparent;
 
@@ -549,6 +639,7 @@ body {
     width: inherit;
 
 }
+
 .container_robot_groundpart_2_2 {
     background-color: black;
 
@@ -556,6 +647,7 @@ body {
     width: inherit;
 
 }
+
 .container_robot_groundpart_2_3 {
     background-color: transparent;
 
@@ -568,7 +660,7 @@ body {
 
 .container_robot_groundpart_3 {
     background-color: darkslategray;
-    
+
     height: inherit;
     width: 2em;
 
