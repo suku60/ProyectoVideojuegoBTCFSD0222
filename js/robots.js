@@ -27,13 +27,13 @@ class Robot {
 
 };
 
-.let robot1 = new Robot("Vitamin", "Boron", 90, 1600, 75, "GXFuel");
-.let robot2 = new Robot("VIKUEL", "Silicon", 100, 1800, 60, "GXFuel");
-.let robot3 = new Robot("DOUBLE_TROUBLE", "Germanium", 105, 1700, 65, "LiquidNitrogen");
-.let robot4 = new Robot("Jagger", "Arsenic", 110, 1300, 80, "GXFuel");
-.let robot5 = new Robot("Raw", "Antimony", 110, 1400, 90, "LiquidNitrogen");
-.let robot6 = new Robot("Manitou", "Tellurium", 120, 1500, 100, "Hydrogen");
-.let robot7 = new Robot("D-Mitri", "Polonium", 120, 1600, 95, "Hydrogen");
+let robot1 = new Robot("Vitamin", "Boron", 90, 1600, 75, "GXFuel");
+let robot2 = new Robot("VIKUEL", "Silicon", 100, 1800, 60, "GXFuel");
+let robot3 = new Robot("DOUBLE_TROUBLE", "Germanium", 105, 1700, 65, "LiquidNitrogen");
+let robot4 = new Robot("Jagger", "Arsenic", 110, 1300, 80, "GXFuel");
+let robot5 = new Robot("Raw", "Antimony", 110, 1400, 90, "LiquidNitrogen");
+let robot6 = new Robot("Manitou", "Tellurium", 120, 1500, 100, "Hydrogen");
+let robot7 = new Robot("D-Mitri", "Polonium", 120, 1600, 95, "Hydrogen");
 
 let allRobots = {
     1: robot1,

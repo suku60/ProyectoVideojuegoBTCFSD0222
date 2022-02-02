@@ -48,5 +48,24 @@ const selectRobot = (numberRobot) => {
         firstRobot.classList.add("Selected_Robot");
         robotData.innerHTML = `${team1.fabrication}`;
 
-    } else if ( )
+    } else if (team2 == ""){
+        team2 = allRobots[numberRobot];
+        let secondRobot = document.getElementById(numberRobot)
+        secondRobot.onclick = "";
+        secondRobot.classList.add("Selected_Robot");
+        
+        console.log (team1,team2)
+
+        setTimeout(() => {
+            switchScreen(3);
+        }, 3666);
+    }
 }
+
+let screen3 = document.getElementById("screen3");
+
+// document.body.addEventListener("keydown", (ev) => {
+
+//     if(screen3.style.display == "block")
+// });
+
