@@ -57,12 +57,12 @@ const selectRobot = (numberRobot) => {
         console.log (team1,team2)
 
         setTimeout(() => {
-            switchScreen(3);
+            switchScreen(4);
         }, 3666);
     }
 }
 
-let screen3 = document.getElementById("screen3");
+let screen4 = document.getElementById("screen4");
 
 // document.body.addEventListener("keydown", (ev) => {
 

@@ -815,7 +815,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
 }
 .screen_menu_settings {
     background-color: whitesmoke;
@@ -827,7 +827,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
 }
 .screen_menu_exit {
     background-color: whitesmoke;
@@ -839,7 +839,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 
@@ -865,9 +865,22 @@ body {
     height: 15vh;
     width: 100vw;
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+
 }
 
 .screen_selection_robots {
+    background-color: whitesmoke;
+
+    margin: 1em;
+
+    height: 15vh;
+    width: 100vw;
     
     display: flex;
     flex-direction: row;
