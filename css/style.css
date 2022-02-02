@@ -254,17 +254,6 @@ body {
 /* LETTER J */
 
 .navbar_title_J {
-    background-color: red;
-
-    height: inherit;
-    width: 3em;
-
-    display: flex;
-    flex-direction: column;
-
-}
-
-.navbar_title_E {
     background-color: transparent;
 
     height: inherit;
@@ -274,6 +263,103 @@ body {
     flex-direction: column;
 
 }
+
+
+.navbar_title_J_1 {
+    background-color: transparent;
+    
+    height: 2em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+
+}
+.navbar_title_J_1_1 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 2.1em;
+
+}
+.navbar_title_J_1_2 {
+    background-color: black;
+
+    height: inherit;
+    width: 0.9em;
+
+}
+.navbar_title_J_2 {
+    background-color: transparent;
+    
+    height: 2em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+.navbar_title_J_2_1 {
+    background-color: black;
+
+    height: inherit;
+    width: 2em;
+
+    border-radius: 0% 0% 0% 50%;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.navbar_title_J_2_1_1 {
+    background-color: lightgray;
+
+    height: 1em;
+    width: 1em;
+
+    border-radius: 0% 0% 50% 50%;
+
+}
+.navbar_title_J_2_2 {
+    background-color: black;
+
+    height: inherit;
+    width: 0.9em;
+
+    border-radius: 0% 0% 50% 0%;
+
+}
+
+/* LETTER E */
+
+.navbar_title_E {
+    background-color: transparent;
+
+    height: inherit;
+    width: 3em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.navbar_title_E_full {
+    background-color: black;
+
+    height: 0.8em;
+    width: 2.5em;
+
+}
+.navbar_title_E_empty {
+    background-color: transparent;
+
+    height: 0.8em;
+    width: inherit;
+
+}
+
+/* LETTER K */
 
 .navbar_title_K {
     background-color: red;
@@ -286,6 +372,66 @@ body {
 
 }
 
+.navbar_title_K_1 {
+    background-color: transparent;
+    
+    height: 2em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+
+}
+.navbar_title_K_1_1 {
+    background-color: black;
+
+    height: inherit;
+    width: 0.9em;
+
+}
+.navbar_title_K_1_2 {
+    background-color: transparent;
+
+    height: 0;
+    width: 0;
+
+  border-left: 0em solid transparent;
+  border-right: 2em solid transparent;
+  border-top: 2em solid black;
+
+}
+
+.navbar_title_K_2 {
+    background-color: transparent;
+    
+    height: 2em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+
+}
+.navbar_title_K_2_1 {
+    background-color: black;
+
+    height: inherit;
+    width: 0.9em;
+
+}
+.navbar_title_K_2_2 {
+    background-color: transparent;
+
+    height: 0;
+    width: 0;
+
+  border-left: 0em solid transparent;
+  border-right: 2em solid transparent;
+  border-bottom: 2em solid black;
+
+}
+
+/* LETTER T */
+
 .navbar_title_T {
     background-color: transparent;
 
@@ -295,6 +441,61 @@ body {
     display: flex;
     flex-direction: column;
 
+}
+.navbar_title_T_1 {
+    background-color: transparent;
+
+    height: 2em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.navbar_title_T_1_1 {
+    background-color: black;
+
+    height: 1em;
+    width: 1em;
+}
+.navbar_title_T_1_2 {
+    background-color: black;
+
+    height: inherit;
+    width: 1em;
+}
+.navbar_title_T_1_3 {
+    background-color: black;
+
+    height: 1em;
+    width: 1em;
+}
+.navbar_title_T_2 {
+    background-color: transparent;
+
+    height: 2em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+}
+.navbar_title_T_2_1 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 1em;
+}
+.navbar_title_T_2_2 {
+    background-color: black;
+
+    height: inherit;
+    width: 1em;
+}
+.navbar_title_T_2_3 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 1em;
 }
 
 .navbar_title_twopoints {
