@@ -17,6 +17,17 @@ body {
 
 }
 
+
+.screen_top {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+/* NAVBAR */
+
 .logo_navbar {
 
     background-color: whitesmoke;
@@ -26,15 +37,33 @@ body {
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    
+
 }
 
-.screen_top {
+.navbar_1 {
+    background-color: red;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    height: 4em;
+    width: 4em;
+
+}
+
+.navbar_2 {
+    background-color: green;
+
+    height: 4em;
+    width: 54em;
+
+}
+
+.navbar_3 {
+    background-color: blue;
+
+    height: 4em;
+    width: 4em;
 
 }
 
