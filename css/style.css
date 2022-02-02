@@ -152,7 +152,7 @@ body {
     /* LETTER R */
 }
 .navbar_title_R {
-    background-color: red;
+    background-color: transparent;
 
     height: inherit;
     width: 3em;
@@ -218,6 +218,8 @@ body {
 
 }
 
+/* LETTER O */
+
 .navbar_title_O {
     background-color: transparent;
 
@@ -228,6 +230,28 @@ body {
     flex-direction: column;
 
 }
+
+.navbar_title_O_1 { 
+    background-color: black;
+
+    height: 2em;
+    width: inherit;
+
+    border-radius: 50% 50% 0% 0%;
+
+}
+
+.navbar_title_O_2 { 
+    background-color: black;
+
+    height: 2em;
+    width: inherit;
+
+    border-radius: 0% 0% 50% 50% ;
+
+}
+
+/* LETTER J */
 
 .navbar_title_J {
     background-color: red;
