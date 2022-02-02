@@ -21,19 +21,19 @@ const switchScreen = (screenNumber) => {
 
     let screenDesired = "screen" + screenNumber;
 
-    let allScreens = ["screen1","screen2","screen3","screen4","screen5"];
+    let allScreens = ["screen1", "screen2", "screen3", "screen4", "screen5"];
 
     allScreens = allScreens.filter(screenNumber => !screenDesired.includes(screenNumber));
 
-    document.getElementById(screenTemporary).style.display="block";
+    document.getElementById(screenTemporary).style.display = "block";
 
     for (let screenTemporary of allScreens) {
-        
-        document.getElementById(screenTemporary).style.display="none";
-    
+
+        document.getElementById(screenTemporary).style.display = "none";
+
     }
 
-    
+
 }
 
 /* selectCar is a constant that we create */
