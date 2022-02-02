@@ -25,7 +25,7 @@ const switchScreen = (screenNumber) => {
 
     allScreens = allScreens.filter(screenNumber => !screenDesired.includes(screenNumber));
 
-    document.getElementById(screenTemporary).style.display = "block";
+    document.getElementById(screenDesired).style.display = "block";
 
     for (let screenTemporary of allScreens) {
 
