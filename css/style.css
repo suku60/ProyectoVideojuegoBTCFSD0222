@@ -28,6 +28,51 @@ body {
 
 /* NAVBAR */
 
+/* NAVBAR ROBOTS IDs */
+
+@-webkit-keyframes rotating  {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+#rotating {
+    -webkit-animation: rotating 70s linear infinite;
+    -moz-animation: rotating 70s linear infinite;
+    -ms-animation: rotating 70s linear infinite;
+    -o-animation: rotating 70s linear infinite;
+    animation: rotating 70s linear infinite;
+  }
+
+  /* we still have to figure something special for these little fellas */
+
+#navbar_robot_detail { 
+    background-color: crimson;
+    
+}
+
 .logo_navbar {
 
     background-color: whitesmoke;
@@ -35,19 +80,38 @@ body {
     height: 15vh;
     width: 100vw;
 
+
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+
+    transition: 0.5s;
 
 
 }
 
+.logo_navbar:hover {
+
+    transition: 0.5s;
+
+    transform: rotateX(180deg);
+
+}
+
 .navbar_1 {
-    background-color: red;
+    background-color: transparent;
 
     height: 4em;
     width: 4em;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transform: rotateZ(90deg);
 
 }
 
@@ -62,11 +126,15 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
+    transition: 0.5s;
+
 
 }
-
+/*
 .navbar_2:hover {
     opacity: 80%;
+
+    transition: 0.5s;
 
     height: 4.5em;
     width: 54.5em;
@@ -74,11 +142,10 @@ body {
     align-items: center;
     justify-content: center;
 
-    transform: rotateX(160deg);
-    
-    transform: rotateY(160deg);
+    transform: rotateX(180deg);
 
 }
+*/
 
 /* TITLE PROJECT:ROBOSTRIKE */
 
@@ -701,10 +768,17 @@ body {
 /* END OF THE LETTERS */
 
 .navbar_3 {
-    background-color: blue;
+    background-color: transparent;
 
     height: 4em;
     width: 4em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transform: rotateZ(-90deg);
 
 }
 
@@ -948,7 +1022,7 @@ body {
 
 .container_robot_upperpart_2_2_2 {
 
-    background-color: lightgrey;
+    background-color: darkgray;
 
     height: 2.5em;
 
