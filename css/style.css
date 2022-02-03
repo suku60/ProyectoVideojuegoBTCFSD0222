@@ -686,6 +686,7 @@ body {
 
 }
 
+/* LETTER S */
 
 .navbar_title_S {
     background-color: transparent;
@@ -730,9 +731,10 @@ body {
     height: 0;
     width: 0;
 
-    border-left: 0.5em solid transparent;
+    border-left: 0.7em solid transparent;
     border-right: 0em solid transparent;
     border-top: 0.5em solid black;
+
 }
 
 .navbar_title_S_1_1_2 {
@@ -943,6 +945,7 @@ body {
     justify-content: center;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3em;
 
 
 
@@ -993,6 +996,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 .screen_selection_indicator {
@@ -1065,12 +1073,41 @@ body {
     align-items: center;
     text-align: center;
 
-    font-size: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
 
     border-radius: 0.2em;
 }
 
+.screen_selection_play_button {
+    background-color: transparent;
+
+    height: 2em;
+    width: 19em;
+
+    display: flex;
+
+
+}
+.screen_selection_play_button_activable {
+    background-color: white;
+
+    height: inherit;
+    width: inherit;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+
+    border-radius: 0.2em;
+
+}
 
 /* screen4 */
 
