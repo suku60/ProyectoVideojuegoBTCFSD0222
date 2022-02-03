@@ -17,30 +17,6 @@ body {
 
 }
 
-/* CSS' styles that IDK how to classify */
-
-.Selected_Robot {
-
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-
-}
-
-.robotData {
-    background-color: white;
-
-    height: 2em;
-    width: 19em;
-
-    justify-content: center center;
-    align-items: center;
-    text-align: center;
-
-    font-size: 1em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
 /* NAVBAR */
 
 /* NAVBAR ROBOTS IDs */
@@ -845,12 +821,31 @@ body {
 
 .screen_welcome {
 
-    background-color: yellow;
+    background-color: whitesmoke;
 
 
     height: 85vh;
     width: 100vw;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+}
+
+.screen_welcome_skipbutton {
+
+    background-color: black;
+
+    height: 5em;
+    width: 12em;
+
+    color: whitesmoke;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* screen2 */
@@ -939,7 +934,7 @@ body {
 
     margin: 1em;
 
-    height: 15vh;
+    height: 10vh;
     width: 100vw;
 
     display: flex;
@@ -958,7 +953,7 @@ body {
 
     margin: 1em;
 
-    height: 15vh;
+    height: 30vh;
     width: 100vw;
 
     display: flex;
@@ -966,6 +961,38 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
+}
+
+.screen_selection_robots_cards {
+    background-color: rgba(0, 0, 0, 0.529);
+
+    margin: 1em;
+
+    height: 14em;
+    width: 16em;
+
+    border-radius: 5% 0% 10% 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.screen_selection_container_tags {
+    background-color: whitesmoke;
+
+    margin: 0.5em;
+
+    height: 2em;
+    width: 11em;
+
+    border-radius: 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .screen_selection_indicator {
@@ -979,8 +1006,71 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    
 
 }
+
+.Selected_Robot {
+
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-animation: selected_robot_rotation 10s linear infinite;
+    -moz-animation: selected_robot_rotation 10s linear infinite;
+    -ms-animation: selected_robot_rotation 10s linear infinite;
+    -o-animation: selected_robot_rotation 10s linear infinite;
+    animation: selected_robot_rotation 10s linear infinite;
+
+}
+
+@-webkit-keyframes selected_robot_rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes selected_robot_rotation {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.robotData {
+    background-color: white;
+
+    height: 2em;
+    width: 19em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    border-radius: 0.2em;
+}
+
 
 /* screen4 */
 
@@ -1701,27 +1791,27 @@ body {
 
 /* DOUBLE_TROUBLE */
 
-#robot_doubletroueble_1 {}
+#robot_doubletrouble_1 {}
 
-#robot_doubletroueble_2 {}
+#robot_doubletrouble_2 {}
 
-#robot_doubletroueble_3 {}
+#robot_doubletrouble_3 {}
 
-#robot_doubletroueble_4 {}
+#robot_doubletrouble_4 {}
 
-#robot_doubletroueble_5 {
+#robot_doubletrouble_5 {
     background-color: green;
 
     border-radius: 50% 50% 50% 50%;
 }
 
-#robot_doubletroueble_6 {}
+#robot_doubletrouble_6 {}
 
-#robot_doubletroueble_7 {}
+#robot_doubletrouble_7 {}
 
-#robot_doubletroueble_8 {}
+#robot_doubletrouble_8 {}
 
-#robot_doubletroueble_9 {}
+#robot_doubletrouble_9 {}
 
 /* Jagger */
 

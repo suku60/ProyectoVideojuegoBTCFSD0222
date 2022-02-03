@@ -307,10 +307,11 @@
     </div>
 
     <!-- yellow screen / welcome / still has to be developed / video? animation with css? -->
-    <section id="screen1" onclick="switchScreen(2)">
-        <div class="screen_welcome"></div>
+    <section id="screen1">
+        <div class="screen_welcome">
+            <div class="screen_welcome_skipbutton" onclick="switchScreen(2)">SKIP INTRO</div>
+        </div>
     </section>
-
     <!-- red screen / menu: start settings & exit -->
     <section id="screen2" style="display:none">
         <div class="screen_menu">
@@ -329,6 +330,7 @@
             </div>
             <div class="screen_selection_robots">
                 <!-- Vitamin -->
+                <div class="screen_selection_robots_cards">
                 <div class="container_robot" id=1 onclick="selectRobot(1)">
                     <div class="container_robot_symbol">
                         <div class="container_robot_symbol_top">
@@ -405,7 +407,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="screen_selection_container_tags">Vitamin</div>
+                </div>
                 <!-- VIKUEL -->
+                <div class="screen_selection_robots_cards">
                 <div class="container_robot" id=2 onclick="selectRobot(2)">
                     <div class="container_robot_symbol">
                         <div class="container_robot_symbol_top">
@@ -482,23 +487,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="screen_selection_container_tags">VIKUEL</div>
+                </div>
                 <!-- DOUBLE_TROUBLE -->
+                <div class="screen_selection_robots_cards">
                 <div class="container_robot" id=3 onclick="selectRobot(3)">
                     <div class="container_robot_symbol">
                         <div class="container_robot_symbol_top">
-                            <div class="container_robot_symbol_1" id="robot_vikuel_1"></div>
-                            <div class="container_robot_symbol_2" id="robot_vikuel_2"></div>
-                            <div class="container_robot_symbol_3" id="robot_vikuel_3"></div>
+                            <div class="container_robot_symbol_1" id="robot_doubletrouble_1"></div>
+                            <div class="container_robot_symbol_2" id="robot_doubletrouble_2"></div>
+                            <div class="container_robot_symbol_3" id="robot_doubletrouble_3"></div>
                         </div>
                         <div class="container_robot_symbol_mid">
-                            <div class="container_robot_symbol_4" id="robot_vikuel_4"></div>
-                            <div class="container_robot_symbol_5" id="robot_vikuel_5"></div>
-                            <div class="container_robot_symbol_6" id="robot_vikuel_6"></div>
+                            <div class="container_robot_symbol_4" id="robot_doubletrouble_4"></div>
+                            <div class="container_robot_symbol_5" id="robot_doubletrouble_5"></div>
+                            <div class="container_robot_symbol_6" id="robot_doubletrouble_6"></div>
                         </div>
                         <div class="container_robot_symbol_bot">
-                            <div class="container_robot_symbol_7" id="robot_vikuel_7"></div>
-                            <div class="container_robot_symbol_8" id="robot_vikuel_8"></div>
-                            <div class="container_robot_symbol_9" id="robot_vikuel_9"></div>
+                            <div class="container_robot_symbol_7" id="robot_doubletrouble_7"></div>
+                            <div class="container_robot_symbol_8" id="robot_doubletrouble_8"></div>
+                            <div class="container_robot_symbol_9" id="robot_doubletrouble_9"></div>
                         </div>
                     </div>   
                     <div class="container_robot_upperpart">
@@ -559,23 +567,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="screen_selection_container_tags">DOUBLE_TROUBLE</div>
+                </div>
                 <!-- Jagger -->
+                <div class="screen_selection_robots_cards">
                 <div class="container_robot" id=4 onclick="selectRobot(4)">
                     <div class="container_robot_symbol">
                         <div class="container_robot_symbol_top">
-                            <div class="container_robot_symbol_1" id="robot_vitamin_1"></div>
-                            <div class="container_robot_symbol_2" id="robot_vitamin_2"></div>
-                            <div class="container_robot_symbol_3" id="robot_vitamin_3"></div>
+                            <div class="container_robot_symbol_1" id="robot_jagger_1"></div>
+                            <div class="container_robot_symbol_2" id="robot_jagger_2"></div>
+                            <div class="container_robot_symbol_3" id="robot_jagger_3"></div>
                         </div>
                         <div class="container_robot_symbol_mid">
-                            <div class="container_robot_symbol_4" id="robot_vitamin_4"></div>
-                            <div class="container_robot_symbol_5" id="robot_vitamin_5"></div>
-                            <div class="container_robot_symbol_6" id="robot_vitamin_6"></div>
+                            <div class="container_robot_symbol_4" id="robot_jagger_4"></div>
+                            <div class="container_robot_symbol_5" id="robot_jagger_5"></div>
+                            <div class="container_robot_symbol_6" id="robot_jagger_6"></div>
                         </div>
                         <div class="container_robot_symbol_bot">
-                            <div class="container_robot_symbol_7" id="robot_vitamin_7"></div>
-                            <div class="container_robot_symbol_8" id="robot_vitamin_8"></div>
-                            <div class="container_robot_symbol_9" id="robot_vitamin_9"></div>
+                            <div class="container_robot_symbol_7" id="robot_jagger_7"></div>
+                            <div class="container_robot_symbol_8" id="robot_jagger_8"></div>
+                            <div class="container_robot_symbol_9" id="robot_jagger_9"></div>
                         </div>
                     </div>
                     <div class="container_robot_upperpart">
@@ -636,23 +647,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="screen_selection_container_tags">Jagger</div>
+                </div>
                 <!-- Raw -->
+                <div class="screen_selection_robots_cards">
                 <div class="container_robot" id=5 onclick="selectRobot(5)">
                     <div class="container_robot_symbol">
                         <div class="container_robot_symbol_top">
-                            <div class="container_robot_symbol_1" id="robot_vitamin_1"></div>
-                            <div class="container_robot_symbol_2" id="robot_vitamin_2"></div>
-                            <div class="container_robot_symbol_3" id="robot_vitamin_3"></div>
+                            <div class="container_robot_symbol_1" id="robot_raw_1"></div>
+                            <div class="container_robot_symbol_2" id="robot_raw_2"></div>
+                            <div class="container_robot_symbol_3" id="robot_raw_3"></div>
                         </div>
                         <div class="container_robot_symbol_mid">
-                            <div class="container_robot_symbol_4" id="robot_vitamin_4"></div>
-                            <div class="container_robot_symbol_5" id="robot_vitamin_5"></div>
-                            <div class="container_robot_symbol_6" id="robot_vitamin_6"></div>
+                            <div class="container_robot_symbol_4" id="robot_raw_4"></div>
+                            <div class="container_robot_symbol_5" id="robot_raw_5"></div>
+                            <div class="container_robot_symbol_6" id="robot_raw_6"></div>
                         </div>
                         <div class="container_robot_symbol_bot">
-                            <div class="container_robot_symbol_7" id="robot_vitamin_7"></div>
-                            <div class="container_robot_symbol_8" id="robot_vitamin_8"></div>
-                            <div class="container_robot_symbol_9" id="robot_vitamin_9"></div>
+                            <div class="container_robot_symbol_7" id="robot_raw_7"></div>
+                            <div class="container_robot_symbol_8" id="robot_raw_8"></div>
+                            <div class="container_robot_symbol_9" id="robot_raw_9"></div>
                         </div>
                     </div>
                     <div class="container_robot_upperpart">
@@ -713,23 +727,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="screen_selection_container_tags">Raw</div>
+                </div>
                 <!-- Manitou -->
+                <div class="screen_selection_robots_cards">
                 <div class="container_robot" id=6 onclick="selectRobot(6)">
                     <div class="container_robot_symbol">
                         <div class="container_robot_symbol_top">
-                            <div class="container_robot_symbol_1" id="robot_vitamin_1"></div>
-                            <div class="container_robot_symbol_2" id="robot_vitamin_2"></div>
-                            <div class="container_robot_symbol_3" id="robot_vitamin_3"></div>
+                            <div class="container_robot_symbol_1" id="robot_manitou_1"></div>
+                            <div class="container_robot_symbol_2" id="robot_manitou_2"></div>
+                            <div class="container_robot_symbol_3" id="robot_manitou_3"></div>
                         </div>
                         <div class="container_robot_symbol_mid">
-                            <div class="container_robot_symbol_4" id="robot_vitamin_4"></div>
-                            <div class="container_robot_symbol_5" id="robot_vitamin_5"></div>
-                            <div class="container_robot_symbol_6" id="robot_vitamin_6"></div>
+                            <div class="container_robot_symbol_4" id="robot_manitou_4"></div>
+                            <div class="container_robot_symbol_5" id="robot_manitou_5"></div>
+                            <div class="container_robot_symbol_6" id="robot_manitou_6"></div>
                         </div>
                         <div class="container_robot_symbol_bot">
-                            <div class="container_robot_symbol_7" id="robot_vitamin_7"></div>
-                            <div class="container_robot_symbol_8" id="robot_vitamin_8"></div>
-                            <div class="container_robot_symbol_9" id="robot_vitamin_9"></div>
+                            <div class="container_robot_symbol_7" id="robot_manitou_7"></div>
+                            <div class="container_robot_symbol_8" id="robot_manitou_8"></div>
+                            <div class="container_robot_symbol_9" id="robot_manitou_9"></div>
                         </div>
                     </div>
                     <div class="container_robot_upperpart">
@@ -790,23 +807,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="screen_selection_container_tags">Manitou</div>
+                </div>
                 <!-- D-Mitri -->
+                <div class="screen_selection_robots_cards">
                 <div class="container_robot" id=7 onclick="selectRobot(7)">
                     <div class="container_robot_symbol">
                         <div class="container_robot_symbol_top">
-                            <div class="container_robot_symbol_1" id="robot_vitamin_1"></div>
-                            <div class="container_robot_symbol_2" id="robot_vitamin_2"></div>
-                            <div class="container_robot_symbol_3" id="robot_vitamin_3"></div>
+                            <div class="container_robot_symbol_1" id="robot_dmitri_1"></div>
+                            <div class="container_robot_symbol_2" id="robot_dmitri_2"></div>
+                            <div class="container_robot_symbol_3" id="robot_dmitri_3"></div>
                         </div>
                         <div class="container_robot_symbol_mid">
-                            <div class="container_robot_symbol_4" id="robot_vitamin_4"></div>
-                            <div class="container_robot_symbol_5" id="robot_vitamin_5"></div>
-                            <div class="container_robot_symbol_6" id="robot_vitamin_6"></div>
+                            <div class="container_robot_symbol_4" id="robot_dmitri_4"></div>
+                            <div class="container_robot_symbol_5" id="robot_dmitri_5"></div>
+                            <div class="container_robot_symbol_6" id="robot_dmitri_6"></div>
                         </div>
                         <div class="container_robot_symbol_bot">
-                            <div class="container_robot_symbol_7" id="robot_vitamin_7"></div>
-                            <div class="container_robot_symbol_8" id="robot_vitamin_8"></div>
-                            <div class="container_robot_symbol_9" id="robot_vitamin_9"></div>
+                            <div class="container_robot_symbol_7" id="robot_dmitri_7"></div>
+                            <div class="container_robot_symbol_8" id="robot_dmitri_8"></div>
+                            <div class="container_robot_symbol_9" id="robot_dmitri_9"></div>
                         </div>
                     </div>
                     <div class="container_robot_upperpart">
@@ -866,6 +886,8 @@
                         <div class="container_robot_groundpart_3">
                         </div>
                     </div>
+                </div>
+                <div class="screen_selection_container_tags">D-Mitri</div>
                 </div>
             </div>
             <div class="screen_selection_indicator">
