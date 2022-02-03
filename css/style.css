@@ -21,7 +21,7 @@ body {
 
 .Selected_Robot {
 
-    -webkit-filter: grayscale(100%); 
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 
 }
@@ -34,7 +34,7 @@ body {
 
     justify-content: center center;
     align-items: center;
-    text-align: center;    
+    text-align: center;
 
     font-size: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -45,47 +45,51 @@ body {
 
 /* NAVBAR ROBOTS IDs */
 
-@-webkit-keyframes rotating  {
+@-webkit-keyframes rotating {
     from {
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
+
 @keyframes rotating {
     from {
-      -ms-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-      -ms-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
+
 #rotating {
     -webkit-animation: rotating 70s linear infinite;
     -moz-animation: rotating 70s linear infinite;
     -ms-animation: rotating 70s linear infinite;
     -o-animation: rotating 70s linear infinite;
     animation: rotating 70s linear infinite;
-  }
+}
 
-  /* we still have to figure something special for these little fellas */
+/* we still have to figure something special for these little fellas */
 
-#navbar_robot_detail { 
+#navbar_robot_detail {
     background-color: crimson;
-    
+
 }
 
 .logo_navbar {
@@ -120,7 +124,7 @@ body {
     height: 4em;
     width: 4em;
 
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,6 +149,7 @@ body {
 
 
 }
+
 /*
 .navbar_2:hover {
     opacity: 80%;
@@ -186,9 +191,10 @@ body {
     flex-direction: column;
 
 }
+
 .navbar_title_P_1 {
     background-color: transparent;
-    
+
     height: 2em;
     width: inherit;
 
@@ -196,6 +202,7 @@ body {
     flex-direction: row;
 
 }
+
 .navbar_title_P_1_1 {
     background-color: black;
 
@@ -205,6 +212,7 @@ body {
     border-radius: 0% 50% 50% 0%;
 
 }
+
 .navbar_title_P_1_2 {
     background-color: transparent;
 
@@ -212,9 +220,10 @@ body {
     width: 0.9em;
 
 }
+
 .navbar_title_P_2 {
     background-color: transparent;
-    
+
     height: 2em;
     width: inherit;
 
@@ -222,6 +231,7 @@ body {
     flex-direction: row;
 
 }
+
 .navbar_title_P_2_1 {
     background-color: black;
 
@@ -229,6 +239,7 @@ body {
     width: 0.9em;
 
 }
+
 .navbar_title_P_2_2 {
     background-color: transparent;
 
@@ -237,6 +248,7 @@ body {
 
     /* LETTER R */
 }
+
 .navbar_title_R {
     background-color: transparent;
 
@@ -251,7 +263,7 @@ body {
 
 .navbar_title_R_1 {
     background-color: transparent;
-    
+
     height: 2em;
     width: inherit;
 
@@ -259,6 +271,7 @@ body {
     flex-direction: row;
 
 }
+
 .navbar_title_R_1_1 {
     background-color: black;
 
@@ -268,6 +281,7 @@ body {
     border-radius: 0% 50% 50% 0%;
 
 }
+
 .navbar_title_R_1_2 {
     background-color: transparent;
 
@@ -275,9 +289,10 @@ body {
     width: 0.9em;
 
 }
+
 .navbar_title_R_2 {
     background-color: transparent;
-    
+
     height: 2em;
     width: inherit;
 
@@ -285,6 +300,7 @@ body {
     flex-direction: row;
 
 }
+
 .navbar_title_R_2_1 {
     background-color: black;
 
@@ -292,15 +308,16 @@ body {
     width: 0.9em;
 
 }
+
 .navbar_title_R_2_2 {
     background-color: transparent;
 
     height: 0;
     width: 0;
 
-  border-left: 0em solid transparent;
-  border-right: 2em solid transparent;
-  border-bottom: 2em solid black;
+    border-left: 0em solid transparent;
+    border-right: 2em solid transparent;
+    border-bottom: 2em solid black;
 
 }
 
@@ -317,7 +334,7 @@ body {
 
 }
 
-.navbar_title_O_1 { 
+.navbar_title_O_1 {
     background-color: black;
 
     height: 2em;
@@ -327,13 +344,13 @@ body {
 
 }
 
-.navbar_title_O_2 { 
+.navbar_title_O_2 {
     background-color: black;
 
     height: 2em;
     width: inherit;
 
-    border-radius: 0% 0% 50% 50% ;
+    border-radius: 0% 0% 50% 50%;
 
 }
 
@@ -353,7 +370,7 @@ body {
 
 .navbar_title_J_1 {
     background-color: transparent;
-    
+
     height: 2em;
     width: inherit;
 
@@ -361,6 +378,7 @@ body {
     flex-direction: row;
 
 }
+
 .navbar_title_J_1_1 {
     background-color: transparent;
 
@@ -368,6 +386,7 @@ body {
     width: 2.1em;
 
 }
+
 .navbar_title_J_1_2 {
     background-color: black;
 
@@ -375,9 +394,10 @@ body {
     width: 0.9em;
 
 }
+
 .navbar_title_J_2 {
     background-color: transparent;
-    
+
     height: 2em;
     width: inherit;
 
@@ -386,6 +406,7 @@ body {
     justify-content: flex-end;
 
 }
+
 .navbar_title_J_2_1 {
     background-color: black;
 
@@ -407,6 +428,7 @@ body {
     border-radius: 0% 0% 50% 50%;
 
 }
+
 .navbar_title_J_2_2 {
     background-color: black;
 
@@ -430,6 +452,7 @@ body {
     align-items: center;
 
 }
+
 .navbar_title_E_full {
     background-color: black;
 
@@ -437,6 +460,7 @@ body {
     width: 2.5em;
 
 }
+
 .navbar_title_E_empty {
     background-color: transparent;
 
@@ -460,7 +484,7 @@ body {
 
 .navbar_title_K_1 {
     background-color: transparent;
-    
+
     height: 2em;
     width: inherit;
 
@@ -468,6 +492,7 @@ body {
     flex-direction: row;
 
 }
+
 .navbar_title_K_1_1 {
     background-color: black;
 
@@ -475,21 +500,22 @@ body {
     width: 0.9em;
 
 }
+
 .navbar_title_K_1_2 {
     background-color: transparent;
 
     height: 0;
     width: 0;
 
-  border-left: 0em solid transparent;
-  border-right: 2em solid transparent;
-  border-top: 2em solid black;
+    border-left: 0em solid transparent;
+    border-right: 2em solid transparent;
+    border-top: 2em solid black;
 
 }
 
 .navbar_title_K_2 {
     background-color: transparent;
-    
+
     height: 2em;
     width: inherit;
 
@@ -497,6 +523,7 @@ body {
     flex-direction: row;
 
 }
+
 .navbar_title_K_2_1 {
     background-color: black;
 
@@ -504,15 +531,16 @@ body {
     width: 0.9em;
 
 }
+
 .navbar_title_K_2_2 {
     background-color: transparent;
 
     height: 0;
     width: 0;
 
-  border-left: 0em solid transparent;
-  border-right: 2em solid transparent;
-  border-bottom: 2em solid black;
+    border-left: 0em solid transparent;
+    border-right: 2em solid transparent;
+    border-bottom: 2em solid black;
 
 }
 
@@ -528,6 +556,7 @@ body {
     flex-direction: column;
 
 }
+
 .navbar_title_T_1 {
     background-color: transparent;
 
@@ -538,24 +567,28 @@ body {
     flex-direction: row;
     justify-content: start;
 }
+
 .navbar_title_T_1_1 {
     background-color: black;
 
     height: 1em;
     width: 1em;
 }
+
 .navbar_title_T_1_2 {
     background-color: black;
 
     height: inherit;
     width: 1em;
 }
+
 .navbar_title_T_1_3 {
     background-color: black;
 
     height: 1em;
     width: 1em;
 }
+
 .navbar_title_T_2 {
     background-color: transparent;
 
@@ -565,18 +598,21 @@ body {
     display: flex;
     flex-direction: row;
 }
+
 .navbar_title_T_2_1 {
     background-color: transparent;
 
     height: inherit;
     width: 1em;
 }
+
 .navbar_title_T_2_2 {
     background-color: black;
 
     height: inherit;
     width: 1em;
 }
+
 .navbar_title_T_2_3 {
     background-color: transparent;
 
@@ -596,7 +632,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
+
 
 }
 
@@ -609,6 +645,7 @@ body {
     border-radius: 40% 20% 44% 50%;
 
 }
+
 .navbar_title_twopoints_2 {
     background-color: black;
 
@@ -645,7 +682,7 @@ body {
 
 .navbar_title_B_1 {
     background-color: transparent;
-    
+
     height: 2em;
     width: inherit;
 
@@ -654,6 +691,7 @@ body {
     justify-content: center;
 
 }
+
 .navbar_title_B_1_1 {
     background-color: black;
 
@@ -663,6 +701,7 @@ body {
     border-radius: 0% 50% 50% 0%;
 
 }
+
 .navbar_title_B_1_2 {
     background-color: transparent;
 
@@ -685,7 +724,7 @@ body {
 
 .navbar_title_S_1 {
     background-color: transparent;
-    
+
     height: 2em;
     width: inherit;
 
@@ -711,13 +750,13 @@ body {
 .navbar_title_S_1_1_1 {
     background-color: whitesmoke;
 
-    
+
     height: 0;
     width: 0;
 
-  border-left: 0.5em solid transparent;
-  border-right: 0em solid transparent;
-  border-top: 0.5em solid black;
+    border-left: 0.5em solid transparent;
+    border-right: 0em solid transparent;
+    border-top: 0.5em solid black;
 }
 
 .navbar_title_S_1_1_2 {
@@ -738,11 +777,11 @@ body {
 }
 
 #reverse {
-    
+
     transform: rotateY(-180deg);
     transform: rotateZ(-180deg);
-    
-    
+
+
 }
 
 
@@ -758,21 +797,24 @@ body {
     flex-direction: row;
 
 }
-.navbar_title_I_1 { 
+
+.navbar_title_I_1 {
     background-color: transparent;
 
     height: inherit;
     width: 1em;
 
 }
-.navbar_title_I_2 { 
+
+.navbar_title_I_2 {
     background-color: black;
 
     height: inherit;
     width: 1em;
 
 }
-.navbar_title_I_3 { 
+
+.navbar_title_I_3 {
     background-color: transparent;
 
     height: inherit;
@@ -805,7 +847,7 @@ body {
 
     background-color: yellow;
 
-    
+
     height: 85vh;
     width: 100vw;
 
@@ -818,7 +860,7 @@ body {
 
     background-color: tomato;
 
-    
+
     height: 85vh;
     width: 100vw;
 
@@ -840,10 +882,11 @@ body {
     justify-content: center;
     align-items: center;
 
-    
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+
 .screen_menu_settings {
     background-color: whitesmoke;
 
@@ -855,10 +898,11 @@ body {
     justify-content: center;
     align-items: center;
 
-    
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
+
 .screen_menu_exit {
     background-color: whitesmoke;
 
@@ -870,8 +914,8 @@ body {
     justify-content: center;
     align-items: center;
 
-    
-    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -890,9 +934,9 @@ body {
 
 }
 
-.screen_selection_header { 
+.screen_selection_header {
     background-color: whitesmoke;
- 
+
     margin: 1em;
 
     height: 15vh;
@@ -916,7 +960,7 @@ body {
 
     height: 15vh;
     width: 100vw;
-    
+
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -937,23 +981,24 @@ body {
     align-items: center;
 
 }
+
 /* screen4 */
 
 .screen_ingame {
 
     background-color: yellowgreen;
-    
+
     height: 85vh;
     width: 100vw;
 
-} 
+}
 
 /* screen5 */
 
 .screen_ingame {
 
     background-color: blue;
-    
+
     height: 85vh;
     width: 100vw;
 
@@ -980,6 +1025,133 @@ body {
 .container_robot:hover {
 
     opacity: 80%;
+}
+
+/* ROBOT: SYMBOLS */
+
+.container_robot_symbol {
+    background-color: transparent;
+
+    height: 5em;
+    width: 5em;
+
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    z-index: 150;
+
+
+
+}
+
+.container_robot_symbol_top {
+    background-color: transparent;
+
+    height: 1.5em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.container_robot_symbol_mid {
+    background-color: transparent;
+
+    height: 2em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.container_robot_symbol_bot {
+    background-color: transparent;
+
+    height: 1.5em;
+    width: inherit;
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.container_robot_symbol_1 {
+
+    height: inherit;
+    width: 1.5em;
+
+}
+
+.container_robot_symbol_2 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 2em;
+
+
+}
+
+.container_robot_symbol_3 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 1.5em;
+
+}
+
+.container_robot_symbol_4 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 1.5em;
+
+
+}
+
+.container_robot_symbol_5 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 2em;
+
+}
+
+.container_robot_symbol_6 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 1.5em;
+
+}
+
+.container_robot_symbol_7 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 1.5em;
+
+}
+
+.container_robot_symbol_8 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 2em;
+
+}
+
+.container_robot_symbol_9 {
+    background-color: transparent;
+
+    height: inherit;
+    width: 1.5em;
+
 }
 
 
@@ -1475,3 +1647,178 @@ body {
 
     border-radius: 0% 15% 15% 0%;
 }
+
+/* ROBOT's DETAILS */
+
+
+/* Vitamin */
+
+#robot_vitamin_1 {}
+
+#robot_vitamin_2 {}
+
+#robot_vitamin_3 {}
+
+#robot_vitamin_4 {}
+
+#robot_vitamin_5 {
+    background-color: red;
+
+    border-radius: 50% 50% 50% 50%;
+}
+
+#robot_vitamin_6 {}
+
+#robot_vitamin_7 {}
+
+#robot_vitamin_8 {}
+
+#robot_vitamin_9 {}
+
+/* VIKUEL */
+
+#robot_vikuel_1 {}
+
+#robot_vikuel_2 {}
+
+#robot_vikuel_3 {}
+
+#robot_vikuel_4 {}
+
+#robot_vikuel_5 {
+    background-color: blue;
+
+    border-radius: 50% 50% 50% 50%;
+}
+
+#robot_vikuel_6 {}
+
+#robot_vikuel_7 {}
+
+#robot_vikuel_8 {}
+
+#robot_vikuel_9 {}
+
+/* DOUBLE_TROUBLE */
+
+#robot_doubletroueble_1 {}
+
+#robot_doubletroueble_2 {}
+
+#robot_doubletroueble_3 {}
+
+#robot_doubletroueble_4 {}
+
+#robot_doubletroueble_5 {
+    background-color: green;
+
+    border-radius: 50% 50% 50% 50%;
+}
+
+#robot_doubletroueble_6 {}
+
+#robot_doubletroueble_7 {}
+
+#robot_doubletroueble_8 {}
+
+#robot_doubletroueble_9 {}
+
+/* Jagger */
+
+#robot_jagger_1 {}
+
+#robot_jagger_2 {}
+
+#robot_jagger_3 {}
+
+#robot_jagger_4 {}
+
+#robot_jagger_5 {
+    background-color: yellow;
+
+    border-radius: 50% 50% 50% 50%;
+}
+
+#robot_jagger_6 {}
+
+#robot_jagger_7 {}
+
+#robot_jagger_8 {}
+
+#robot_jagger_9 {}
+
+/* Raw */
+
+#robot_raw_1 {}
+
+#robot_raw_2 {}
+
+#robot_raw_3 {}
+
+#robot_raw_4 {}
+
+#robot_raw_5 {
+    background-color: fuchsia;
+
+    border-radius: 50% 50% 50% 50%;
+}
+
+#robot_raw_6 {}
+
+#robot_raw_7 {}
+
+#robot_raw_8 {}
+
+#robot_raw_9 {}
+
+/* Manitou */
+
+
+
+#robot_manitou_1 {}
+
+#robot_manitou_2 {}
+
+#robot_manitou_3 {}
+
+#robot_manitou_4 {}
+
+#robot_manitou_5 {
+    background-color: springgreen;
+
+    border-radius: 50% 50% 50% 50%;
+}
+
+#robot_manitou_6 {}
+
+#robot_manitou_7 {}
+
+#robot_manitou_8 {}
+
+#robot_manitou_9 {}
+
+/* D-Mitri */
+
+
+
+#robot_dmitri_1 {}
+
+#robot_dmitri_2 {}
+
+#robot_dmitri_3 {}
+
+#robot_dmitri_4 {}
+
+#robot_dmitri_5 {
+    background-color: maroon;
+
+    border-radius: 50% 50% 50% 50%;
+}
+
+#robot_dmitri_6 {}
+
+#robot_dmitri_7 {}
+
+#robot_dmitri_8 {}
+
+#robot_dmitri_9 {}
