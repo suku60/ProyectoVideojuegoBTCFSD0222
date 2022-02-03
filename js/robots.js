@@ -18,10 +18,10 @@ class Robot {
     }
 
     accelerate() {
-        return this.speed = 0;
+        return this.speed += 20;
     }
 
-    accelerate() {
+    slow_down_movement () {
         return this.speed = 0;
     }
 
@@ -36,10 +36,11 @@ let robot6 = new Robot("Manitou", "Tellurium", 120, 1500, 100, "Hydrogen");
 let robot7 = new Robot("D-Mitri", "Polonium", 120, 1600, 95, "Hydrogen");
 
 let allRobots = {
-    1: robot1,
-    2: robot2,
-    3: robot3,
-    4: robot4,
-    5: robot5,
-    6: robot6,
+    1 : robot1,
+    2 : robot2,
+    3 : robot3,
+    4 : robot4,
+    5 : robot5,
+    6 : robot6,
+    7 : robot7
 }

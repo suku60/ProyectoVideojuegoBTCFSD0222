@@ -51,14 +51,14 @@ const selectRobot = (numberRobot) => {
     } else if (team2 == ""){
         team2 = allRobots[numberRobot];
         let secondRobot = document.getElementById(numberRobot)
+        robotData = document.getElementById("data" + 2);
         secondRobot.onclick = "";
         secondRobot.classList.add("Selected_Robot");
-        
-        console.log (team1,team2)
+        robotData.innerHTML = `${team2.fabrication}`;
 
         setTimeout(() => {
             switchScreen(4);
-        }, 3666);
+        }, 666);
     }
 }
 
