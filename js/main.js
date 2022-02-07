@@ -59,14 +59,187 @@ const selectRobot = (numberRobot) => {
         robotData.innerHTML = `${team2.fabrication}`;
         
         setTimeout(() => {
-            switchScreen(4);
+            playButton.innerHTML = `<div class="play_button" alt="Click here to play" onclick="switchScreen(4)">PLAY</div>`;
         }, 666);
+
     }
-
-
 }
 
-let screen4 = document.getElementById("screen4");
+// inGameDisplay is a constant that will update our stats in-game, setting every image that we need and everything we need to show on screen.
+
+const inGameDisplay = () => { /*
+
+    robotDisplay_team1.innerHTML = `<div class="container_robot">
+    <div class="container_robot_symbol">
+        <div class="container_robot_symbol_top">
+            <div class="container_robot_symbol_1" id="robot_${team1.fabrication}_1"></div>
+            <div class="container_robot_symbol_2" id="robot_${team1.fabrication}_2"></div>
+            <div class="container_robot_symbol_3" id="robot_${team1.fabrication}_3"></div>
+        </div>
+        <div class="container_robot_symbol_mid">
+            <div class="container_robot_symbol_4" id="robot_${team1.fabrication}_4"></div>
+            <div class="container_robot_symbol_5" id="robot_${team1.fabrication}_5"></div>
+            <div class="container_robot_symbol_6" id="robot_${team1.fabrication}_6"></div>
+        </div>
+        <div class="container_robot_symbol_bot">
+            <div class="container_robot_symbol_7" id="robot_${team1.fabrication}_7"></div>
+            <div class="container_robot_symbol_8" id="robot_${team1.fabrication}_8"></div>
+            <div class="container_robot_symbol_9" id="robot_${team1.fabrication}_9"></div>
+        </div>
+    </div>
+    <div class="container_robot_upperpart">
+        <div class="container_robot_upperpart_1">
+        </div>
+        <div class="container_robot_upperpart_2">
+            <div class="container_robot_upperpart_2_1">
+                <div class="container_robot_upperpart_2_1_1">
+                </div>
+                <div class="container_robot_upperpart_2_1_2">
+                    <div class="container_robot_upperpart_2_1_2_1">
+                    </div>
+                    <div class="container_robot_upperpart_2_1_2_2">
+                        <div class="container_robot_upperpart_2_1_2_2_1">
+                        </div>
+                        <div class="container_robot_upperpart_2_1_2_2_2">
+                        </div>
+                        <div class="container_robot_upperpart_2_1_2_2_3">
+                        </div>
+                    </div>
+                    <div class="container_robot_upperpart_2_1_2_3">
+                        <div class="container_robot_upperpart_2_1_2_3_1">
+                        </div>
+                        <div class="container_robot_upperpart_2_1_2_3_2">
+                        </div>
+                        <div class="container_robot_upperpart_2_1_2_3_3">
+                        </div>
+                    </div>
+                </div>
+                <div class="container_robot_upperpart_2_1_3">
+                </div>
+            </div>
+            <div class="container_robot_upperpart_2_2">
+                <div class="container_robot_upperpart_2_2_1"></div>
+                <div class="container_robot_upperpart_2_2_2"></div>
+                <div class="container_robot_upperpart_2_2_3"></div>
+            </div>
+            <div class="container_robot_upperpart_2_3">
+            </div>
+        </div>
+        <div class="container_robot_upperpart_3">
+        </div>
+    </div>
+    <div class="container_robot_groundpart">
+        <div class="container_robot_groundpart_1">
+        </div>
+        <div class="container_robot_groundpart_2">
+            <div class="container_robot_groundpart_2_1">
+            </div>
+            <div class="container_robot_groundpart_2_2">
+            </div>
+            <div class="container_robot_groundpart_2_3">
+            </div>
+        </div>
+        <div class="container_robot_groundpart_3">
+        </div>
+    </div>`;
+    statsDisplay_team1.innerHTML = `<div class="stats_container><div class="stats_fabrication">${team1.fabrication}</div><div class="stats_meters">${team1.meters}</div><div class="stats_energy">${team1.energy}</div></div>`;
+
+    robotDisplay_team2.innerHTML = `<div class="container_robot">
+    <div class="container_robot_symbol">
+        <div class="container_robot_symbol_top">
+            <div class="container_robot_symbol_1" id="robot_${team2.fabrication}_1"></div>
+            <div class="container_robot_symbol_2" id="robot_${team2.fabrication}_2"></div>
+            <div class="container_robot_symbol_3" id="robot_${team2.fabrication}_3"></div>
+        </div>
+        <div class="container_robot_symbol_mid">
+            <div class="container_robot_symbol_4" id="robot_${team2.fabrication}_4"></div>
+            <div class="container_robot_symbol_5" id="robot_${team2.fabrication}_5"></div>
+            <div class="container_robot_symbol_6" id="robot_${team2.fabrication}_6"></div>
+        </div>
+        <div class="container_robot_symbol_bot">
+            <div class="container_robot_symbol_7" id="robot_${team2.fabrication}_7"></div>
+            <div class="container_robot_symbol_8" id="robot_${team2.fabrication}_8"></div>
+            <div class="container_robot_symbol_9" id="robot_${team2.fabrication}_9"></div>
+        </div>
+    </div>
+    <div class="container_robot_upperpart">
+        <div class="container_robot_upperpart_1">
+        </div>
+        <div class="container_robot_upperpart_2">
+            <div class="container_robot_upperpart_2_1">
+                <div class="container_robot_upperpart_2_1_1">
+                </div>
+                <div class="container_robot_upperpart_2_1_2">
+                    <div class="container_robot_upperpart_2_1_2_1">
+                    </div>
+                    <div class="container_robot_upperpart_2_1_2_2">
+                        <div class="container_robot_upperpart_2_1_2_2_1">
+                        </div>
+                        <div class="container_robot_upperpart_2_1_2_2_2">
+                        </div>
+                        <div class="container_robot_upperpart_2_1_2_2_3">
+                        </div>
+                    </div>
+                    <div class="container_robot_upperpart_2_1_2_3">
+                        <div class="container_robot_upperpart_2_1_2_3_1">
+                        </div>
+                        <div class="container_robot_upperpart_2_1_2_3_2">
+                        </div>
+                        <div class="container_robot_upperpart_2_1_2_3_3">
+                        </div>
+                    </div>
+                </div>
+                <div class="container_robot_upperpart_2_1_3">
+                </div>
+            </div>
+            <div class="container_robot_upperpart_2_2">
+                <div class="container_robot_upperpart_2_2_1"></div>
+                <div class="container_robot_upperpart_2_2_2"></div>
+                <div class="container_robot_upperpart_2_2_3"></div>
+            </div>
+            <div class="container_robot_upperpart_2_3">
+            </div>
+        </div>
+        <div class="container_robot_upperpart_3">
+        </div>
+    </div>
+    <div class="container_robot_groundpart">
+        <div class="container_robot_groundpart_1">
+        </div>
+        <div class="container_robot_groundpart_2">
+            <div class="container_robot_groundpart_2_1">
+            </div>
+            <div class="container_robot_groundpart_2_2">
+            </div>
+            <div class="container_robot_groundpart_2_3">
+            </div>
+        </div>
+        <div class="container_robot_groundpart_3">
+        </div>
+    </div>`;
+    statsDisplay_team2.innerHTML = `<div class="stats_container><div class="stats_fabrication">${team2.fabrication}</div><div class="stats_meters">${team2.meters}</div><div class="stats_energy">${team2.energy}</div></div>`;
+
+
+*/
+    
+    // desarrollar CSS: stats_container
+    
+    
+    
+    // displayTeam1.innerHTML = `<img class="foto" src="img/${team1.marca}.jpg" alt="primer_coche"/>`;
+    // statsTeam1.innerHTML = `<div>${team1.marca}<br>${team1.modelo}<br>${team1.combustible}</div>`;
+    
+    // displayTeam2.innerHTML = `<img class="foto" src="img/${team2.marca}.jpg" alt="segundo_coche"/>`;
+    // statsTeam2.innerHTML = `<div>${team2.marca}<br>${team2.modelo}<br>${team2.combustible}</div>`;
+                                           
+}
+
+// KIDNAPPING HTML ELEMENTS
+
+let playButton = document.getElementById("play_button_indicator")
+
+let 
+
 
 // document.body.addEventListener("keydown", (ev) => {
 
