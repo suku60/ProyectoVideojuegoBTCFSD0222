@@ -36,13 +36,13 @@ const switchScreen = (screenNumber) => {
 
 }
 
-/* selectCar is a constant that we create for the team selection screen, which allow us to include the robots
+/* selectRobot is a constant that we create for the team selection screen, which allow us to include the robots
 inside them */
 
 
 const selectRobot = (numberRobot) => {
 
-    if(team1 == ""){
+    if (team1 == "") {
         team1 = allRobots[numberRobot];
         let firstRobot = document.getElementById(numberRobot)
         let robotData = document.getElementById("data" + 1);
@@ -50,14 +50,14 @@ const selectRobot = (numberRobot) => {
         firstRobot.classList.add("Selected_Robot");
         robotData.innerHTML = `${team1.fabrication}`;
 
-    } else if (team2 == ""){
+    } else if (team2 == "") {
         team2 = allRobots[numberRobot];
         let secondRobot = document.getElementById(numberRobot)
         robotData = document.getElementById("data" + 2);
         secondRobot.onclick = "";
         secondRobot.classList.add("Selected_Robot");
         robotData.innerHTML = `${team2.fabrication}`;
-        
+
         setTimeout(() => {
             playButton.innerHTML = `<div class="play_button" alt="Click here to play" onclick="switchScreen(4)">PLAY</div>`;
         }, 666);
@@ -67,7 +67,11 @@ const selectRobot = (numberRobot) => {
 
 // inGameDisplay is a constant that will update our stats in-game, setting every image that we need and everything we need to show on screen.
 
-const inGameDisplay = () => { /*
+
+
+const inGameDisplay = () => {
+
+    document.getElementById("red_start_screen").style.display = "none";
 
     robotDisplay_team1.innerHTML = `<div class="container_robot">
     <div class="container_robot_symbol">
@@ -142,7 +146,7 @@ const inGameDisplay = () => { /*
         <div class="container_robot_groundpart_3">
         </div>
     </div>`;
-    statsDisplay_team1.innerHTML = `<div class="stats_container><div class="stats_fabrication">${team1.fabrication}</div><div class="stats_meters">${team1.meters}</div><div class="stats_energy">${team1.energy}</div></div>`;
+    statsDisplay_team1.innerHTML = `<div class="stats_container"><div class="stats_fabrication">${team1.fabrication}</div><div class="stats_meters">${team1.meters}</div><div class="stats_energy">${team1.energy}</div></div>`;
 
     robotDisplay_team2.innerHTML = `<div class="container_robot">
     <div class="container_robot_symbol">
@@ -217,32 +221,35 @@ const inGameDisplay = () => { /*
         <div class="container_robot_groundpart_3">
         </div>
     </div>`;
-    statsDisplay_team2.innerHTML = `<div class="stats_container><div class="stats_fabrication">${team2.fabrication}</div><div class="stats_meters">${team2.meters}</div><div class="stats_energy">${team2.energy}</div></div>`;
+    statsDisplay_team2.innerHTML = `<div class="stats_container"><div class="stats_fabrication">${team2.fabrication}</div><div class="stats_meters">${team2.meters}</div><div class="stats_energy">${team2.energy}</div></div>`;
+};
 
 
-*/
-    
-    // desarrollar CSS: stats_container
-    
-    
-    
-    // displayTeam1.innerHTML = `<img class="foto" src="img/${team1.marca}.jpg" alt="primer_coche"/>`;
-    // statsTeam1.innerHTML = `<div>${team1.marca}<br>${team1.modelo}<br>${team1.combustible}</div>`;
-    
-    // displayTeam2.innerHTML = `<img class="foto" src="img/${team2.marca}.jpg" alt="segundo_coche"/>`;
-    // statsTeam2.innerHTML = `<div>${team2.marca}<br>${team2.modelo}<br>${team2.combustible}</div>`;
-                                           
-}
+// desarrollar CSS: stats_container
+
+
+
+// displayTeam1.innerHTML = `<img class="foto" src="img/${team1.marca}.jpg" alt="primer_coche"/>`;
+// statsTeam1.innerHTML = `<div>${team1.marca}<br>${team1.modelo}<br>${team1.combustible}</div>`;
+
+// displayTeam2.innerHTML = `<img class="foto" src="img/${team2.marca}.jpg" alt="segundo_coche"/>`;
+// statsTeam2.innerHTML = `<div>${team2.marca}<br>${team2.modelo}<br>${team2.combustible}</div>`;
+
 
 // KIDNAPPING HTML ELEMENTS
 
-let playButton = document.getElementById("play_button_indicator")
+let playButton = document.getElementById("play_button_indicator");
+let robotDisplay_team1 = document.getElementById("robot_team1");
+let robotDisplay_team2 = document.getElementById("robot_team2");
+let statsDisplay_team1 = document.getElementById("stats_team1");
+let statsDisplay_team2 = document.getElementById("stats_team2");
+let startDisplay = document.getElementById("red_start_screen");
 
-let 
+
+
 
 
 // document.body.addEventListener("keydown", (ev) => {
 
 //     if(screen3.style.display == "block")
 // });
-

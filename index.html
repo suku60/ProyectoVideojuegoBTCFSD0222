@@ -904,10 +904,26 @@
         </div>
     </section>
     <!-- race fight screen -->
-    <section id="screen4" style="display:none" onclick="switchScreen(5)">
+    <section id="screen4" style="display:none">
         <div class="screen_ingame">
-            <div class="screen_ingame_top"></div>
-            <div class="screen_ingame_bot"></div>
+            <div class="screen_ingame_front" id="red_start_screen" onclick="inGameDisplay()">CLICK HERE TO START</div>
+            <div class="screen_ingame_back">
+                <div class="screen_ingame_top">
+                    <!-- team 1 -->
+                    <div class="screen_ingame_character_container">
+                        <div id="robot_team1" class="screen_ingame_character_container_robot"></div>
+                        <div id="stats_team1" class="screen_ingame_character_container_stats"></div>
+                    </div>
+                    <!-- team 2 -->
+                    <div class="screen_ingame_character_container">
+                        <div id="robot_team2" class="screen_ingame_character_container_robot"></div>
+                        <div id="stats_team2" class="screen_ingame_character_container_stats"></div>
+                    </div>
+
+                </div>
+                <div class="screen_ingame_bot">
+                </div>
+            </div>
         </div>
 
     </section>
@@ -918,6 +934,7 @@
 
     <script src="js/robots.js"></script>
     <script src="js/main.js"></script>
+
 
 </body>
 

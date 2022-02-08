@@ -1125,14 +1125,63 @@ body {
     align-items: center;
 
 }
+
+/* red screen for onclick start game */
+
+.screen_ingame_front {
+    background-color: red;
+
+    height: 70vh;
+    width: 90vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 100;
+}
+
+/* actual game screen */
+
+.screen_ingame_back {
+    background-color: transparent;
+
+    height: 85vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+
+}
+
 .screen_ingame_top {
 
     background-color: whitesmoke;
 
+    height: 36em;
+    width: 110em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.screen_ingame_character_container {
+    
+    background-color: white;
+
     margin-top: 1rem;
 
-    height: 60vh;
-    width: 90vw;
+    height: 35em;
+    width: 50em;
 
     display: flex;
     flex-direction: column;
@@ -1141,14 +1190,24 @@ body {
 
 }
 
-.screen_ingame_bot {
+.screen_ingame_character_container_robot {
+    background-color: gray;
 
-    background-color: white;
+    height: 29em;
+    width: inherit;
 
-    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    height: 20vh;
-    width: 90vw;
+}
+
+.screen_ingame_character_container_stats {
+    background-color: black;
+
+    height: 6em;
+    width: inherit;
 
     display: flex;
     flex-direction: row;
@@ -1164,29 +1223,78 @@ body {
     margin: 0%;
     padding: 0%;
 
+    height: 6em;
+    width: 40vw;
+
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .stats_fabrication {
-    background-color: black;
+    background-color: red;
 
     color: white;
+    
+    height: 3em;
+    width: 12em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .stats_meters {
-    background-color: black;
+    background-color: blueviolet;
 
     color: white;
+    
+    height: 3em;
+    width: 12em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .stats_energy {
-    background-color: black;
+    background-color: green;
 
     color: white;
+    
+    height: 3em;
+    width: 12em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.screen_ingame_bot {
+
+    background-color: white;
+
+    margin-top: 1rem;
+
+    height: 9em;
+    width: 100em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.screen_ingame_bot_start_button{
+
+    background-color: red;
+
+    height: 5em;
+    width: 10em;
+
+}
+
 
 /* screen5 */
 
