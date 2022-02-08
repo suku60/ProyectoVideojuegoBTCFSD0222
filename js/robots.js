@@ -9,9 +9,10 @@ let total_meters = 3000;
 
 class Robot {
 
-    constructor(fabrication, element, speed, weight, damage, energy,  fuel) {
+    constructor(fabrication, element, element_multiplier, speed, weight, damage, energy,  fuel) {
         this.fabrication = fabrication;
         this.element = element;
+        this.element_multiplier = element_multiplier;
         this.speed = speed;
         this.weight = weight;
         this.damage = damage;
@@ -21,22 +22,26 @@ class Robot {
     }
 
     accelerate() {
-        return this.meters += 100;
+        return this.meters += (100/this.weight)*1000;
     }
 
-    heal () {
-        return this.energy += 100;
+    heal() {
+        return this.energy += 100*this.element_multiplier;
+    }
+
+    take_damage() {
+        return this.energy -= (100/this.element_multiplier)+this.damage;
     }
 
 };
 
-let robot1 = new Robot("vitamin","Boron", 90, 1600, 75, 2400, "GXFuel");
-let robot2 = new Robot("vikuel","Silicon", 100, 1800, 60, 2400, "GXFuel");
-let robot3 = new Robot("double_trouble","Germanium", 105, 1700, 65, 2400, "LiquidNitrogen");
-let robot4 = new Robot("jagger","Arsenic", 110, 1300, 80, 2400, "GXFuel");
-let robot5 = new Robot("raw","Antimony", 110, 1400, 90, 2400, "LiquidNitrogen");
-let robot6 = new Robot("manitou","Tellurium", 120, 1500, 100, 2400, "Hydrogen");
-let robot7 = new Robot("d-mitri","Polonium", 120, 1600, 95, 2400, "Hydrogen");
+let robot1 = new Robot("vitamin","Boron",1.1, 900, 1600, 75, 2400, "GXFuel");
+let robot2 = new Robot("vikuel","Silicon",1.2, 1000, 1800, 60, 2400, "GXFuel");
+let robot3 = new Robot("double_trouble","Germanium",1.1, 1250, 1700, 65, 2400, "LiquidNitrogen");
+let robot4 = new Robot("jagger","Arsenic",1.2, 1100, 1300, 80, 2400, "GXFuel");
+let robot5 = new Robot("raw","Antimony",1.1, 1200, 1400, 90, 2400, "LiquidNitrogen");
+let robot6 = new Robot("manitou","Tellurium",1.2, 1100, 1500, 100, 2400, "Hydrogen");
+let robot7 = new Robot("d-mitri","Polonium",1.1, 1200, 1600, 95, 2400, "Hydrogen");
 
 let allRobots = {
     1 : robot1,

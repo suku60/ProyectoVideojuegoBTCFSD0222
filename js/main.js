@@ -240,6 +240,9 @@ const inGameDisplay = () => {
 
 // InGame action buttons
 
+
+// MOVEMENT 
+
 const move1 = () => {
 
 
@@ -262,8 +265,8 @@ const move1 = () => {
 
     };
 
-    console.log(`${team1.meters}`)
-    console.log(winner)
+    console.log(`team 1 reached ${team1.meters} meters`)
+    console.log(`the winner is ${winner}`)
 
 }
 
@@ -290,12 +293,126 @@ const move2 = () => {
 
     };
 
-    console.log(`team 2 - ${team2.meters}`);
+    console.log(`team 2 reached ${team2.meters} meters`);
     console.log(`the winner is... ${winner}`);
+}
+
+// HEALING
+
+const healing1 = () => {
 
 
+    energy1_show.innerHTML = `<p>${team1.energy}</p>`;
+
+    if (team1.energy == 0) {
+
+        winner = team2;
+
+        winner_show.innerHTML = `the winner is... <br>
+        ${team2.fabrication}`;
+
+        setTimeout(() => {
+            switchScreen(5);
+        }, 1200);
+
+    } else {
+
+        team1.heal();
+
+    };
+
+    console.log(`energy team 1 is ${team1.energy}`)
+    console.log(`the winner is ${winner}`)
 
 }
+
+const healing2 = () => {
+
+
+    energy2_show.innerHTML = `<p>${team2.energy}</p>`;
+
+    if (team1.energy == 0) {
+
+        winner = team1;
+
+        winner_show.innerHTML = `the winner is... <br>
+        ${team2.fabrication}`;
+
+        setTimeout(() => {
+            switchScreen(5);
+        }, 1200);
+
+    } else {
+
+        team2.heal();
+
+    };
+
+    console.log(`energy team 2 is ${team2.energy}`)
+    console.log(`the winner is ${winner}`)
+
+}
+
+// ATTACK
+
+const shooting1 = () => {
+
+
+    energy2_show.innerHTML = `<p>${team2.energy}</p>`;
+
+    if (team2.energy > 0 ) {
+
+        team2.take_damage();
+
+    } else {
+
+        winner = team1;
+
+        winner_show.innerHTML = `the winner is... <br>
+        ${team1.fabrication}`;
+
+        setTimeout(() => {
+            switchScreen(5);
+        }, 1200);
+
+
+    };
+
+    console.log(`energy team 2 is ${team2.energy}`)
+    console.log(`the winner is ${winner}`)
+
+}
+
+const shooting2 = () => {
+
+
+    energy1_show.innerHTML = `<p>${team1.energy}</p>`;
+
+    if (team1.energy > 0 ) {
+
+        team1.take_damage();
+
+    } else {
+
+        winner = team2;
+
+        winner_show.innerHTML = `the winner is... <br>
+        ${team1.fabrication}`;
+
+        setTimeout(() => {
+            switchScreen(5);
+        }, 1200);
+
+
+    };
+
+    console.log(`energy team 1 is ${team1.energy}`)
+    console.log(`the winner is ${winner}`)
+
+}
+
+
+
 // KIDNAPPING HTML ELEMENTS
 
 let playButton = document.getElementById("play_button_indicator");
@@ -307,7 +424,7 @@ let startDisplay = document.getElementById("red_start_screen");
 let winner_show = document.getElementById("winner_id");
 let meters1_show = document.getElementById("meters1_show");
 let meters2_show = document.getElementById("meters2_show");
-
+let energy1_show = document.getElementById("energy1_show")
 
 
 
