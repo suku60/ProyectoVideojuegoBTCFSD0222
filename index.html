@@ -914,16 +914,38 @@
                     <!-- team 1 -->
                     <div class="screen_ingame_character_container">
                         <div id="robot_team1" class="screen_ingame_character_container_robot"></div>
-                        <div id="stats_team1" class="screen_ingame_character_container_stats"></div>
+                        <div class="screen_ingame_character_container_stats_full">
+                            <div id="stats_team1" class="screen_ingame_character_container_stats"></div>
+                            <div class="screen_ingame_character_meters">
+                                <div class="screen_ingame_character_meters_fixed">METERS</div>
+                                <div class="screen_ingame_character_meters_variant" id="meters1_show"></div>
+                            </div>
+                        </div>
                     </div>
                     <!-- team 2 -->
                     <div class="screen_ingame_character_container">
                         <div id="robot_team2" class="screen_ingame_character_container_robot"></div>
-                        <div id="stats_team2" class="screen_ingame_character_container_stats"></div>
+                        <div class="screen_ingame_character_container_stats_full">
+                            <div id="stats_team2" class="screen_ingame_character_container_stats"></div>
+                            <div class="screen_ingame_character_meters">
+                                <div class="screen_ingame_character_meters_fixed">METERS</div>
+                                <div class="screen_ingame_character_meters_variant" id="meters2_show"></div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
                 <div class="screen_ingame_bot">
+                    <div class="screen_ingame_bot_controls">
+                        <div class="screen_ingame_bot_controls_move" onclick="move1()">move</div>
+                        <div class="screen_ingame_bot_controls_attack">attack</div>
+                        <div class="screen_ingame_bot_controls_heal">heal</div>
+                    </div>
+                    <div class="screen_ingame_bot_controls">
+                        <div class="screen_ingame_bot_controls_move" onclick="move2()">move</div>
+                        <div class="screen_ingame_bot_controls_attack">attack</div>
+                        <div class="screen_ingame_bot_controls_heal">heal</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -931,7 +953,9 @@
     </section>
     <!-- credits screen -->
     <section id="screen5" style="display:none" onclick="switchScreen(1)">
-        <div class="screen_credits"></div>
+        <div class="screen_credits">
+            <div id="winner_id" class="winner_class"></div>
+        </div>
     </section>
 
     <script src="js/robots.js"></script>

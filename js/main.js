@@ -68,7 +68,6 @@ const selectRobot = (numberRobot) => {
 // inGameDisplay is a constant that will update our stats in-game, setting every image that we need and everything we need to show on screen.
 
 
-
 const inGameDisplay = () => {
 
     document.getElementById("red_start_screen").style.display = "none";
@@ -148,10 +147,10 @@ const inGameDisplay = () => {
     </div>`;
     statsDisplay_team1.innerHTML = `<div class="stats_container">
     <div class="stats_container_rows">
-    <div class="stats_fabrication">NAME</div><div class="stats_meters">METERS</div><div class="stats_energy">ENERGY</div>
+    <div class="stats_fabrication">NAME</div><div class="stats_energy">ENERGY</div>
     </div>
     <div class="stats_container_rows">
-    <div class="stats_fabrication">${team1.fabrication}</div><div class="stats_meters">${team1.meters}</div><div class="stats_energy">${team1.energy}</div>
+    <div class="stats_fabrication">${team1.fabrication}</div><div class="stats_energy">${team1.energy}</div>
     </div>
     </div>`;
 
@@ -230,26 +229,60 @@ const inGameDisplay = () => {
     </div>`;
     statsDisplay_team2.innerHTML = `<div class="stats_container">
     <div class="stats_container_rows">
-    <div class="stats_fabrication">NAME</div><div class="stats_meters">METERS</div><div class="stats_energy">ENERGY</div>
+    <div class="stats_fabrication">NAME</div><div class="stats_energy">ENERGY</div>
     </div>
     <div class="stats_container_rows">
-    <div class="stats_fabrication">${team2.fabrication}</div><div class="stats_meters">${team2.meters}</div><div class="stats_energy">${team2.energy}</div>
+    <div class="stats_fabrication">${team2.fabrication}</div><div class="stats_energy">${team2.energy}</div>
     </div>
     </div>`;
 };
 
 
-// desarrollar CSS: stats_container
+// InGame action buttons
 
+const move1 = () => {
 
+    if(team1.meters >= total_meters){
 
-// displayTeam1.innerHTML = `<img class="foto" src="img/${team1.marca}.jpg" alt="primer_coche"/>`;
-// statsTeam1.innerHTML = `<div>${team1.marca}<br>${team1.modelo}<br>${team1.combustible}</div>`;
+        winner = team1;
 
-// displayTeam2.innerHTML = `<img class="foto" src="img/${team2.marca}.jpg" alt="segundo_coche"/>`;
-// statsTeam2.innerHTML = `<div>${team2.marca}<br>${team2.modelo}<br>${team2.combustible}</div>`;
+        switchScreen(5)
 
+        winner_show.innerHTML = `the winner is... <br>
+        ${team1.fabrication}`
 
+    } else {
+
+    team1.accelerate();
+
+    };
+
+    console.log(team1.meters)
+    console.log(winner)
+
+}
+
+const move2 = () => {
+
+    if(team2.meters >= total_meters){
+
+        winner = team2
+
+        switchScreen(5)
+
+        winner_show.innerHTML = `the winner is... <br>
+        ${team2.fabrication}`
+
+    } else {
+
+    team2.accelerate();
+
+    };
+
+    console.log(`team 2 - ${team2.meters}`)
+    console.log(`the winner is... ${winner}`)
+
+}
 // KIDNAPPING HTML ELEMENTS
 
 let playButton = document.getElementById("play_button_indicator");
@@ -258,7 +291,9 @@ let robotDisplay_team2 = document.getElementById("robot_team2");
 let statsDisplay_team1 = document.getElementById("stats_team1");
 let statsDisplay_team2 = document.getElementById("stats_team2");
 let startDisplay = document.getElementById("red_start_screen");
-
+let winner_show = document.getElementById("winner_id");
+let meters1_show = document.getElementById("meters1_show");
+let meters2_show = document.getElementById("meters2_show");
 
 
 

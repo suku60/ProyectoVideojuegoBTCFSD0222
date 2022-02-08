@@ -4,6 +4,8 @@ let team2 = "";
 
 let winner = "";
 
+let total_meters = 3000;
+
 
 class Robot {
 
@@ -19,7 +21,7 @@ class Robot {
     }
 
     accelerate() {
-        return this.speed += 100;
+        return this.meters += 100;
     }
 
     heal () {
@@ -28,13 +30,13 @@ class Robot {
 
 };
 
-let robot1 = new Robot("Vitamin","Boron", 90, 1600, 75, 2400, "GXFuel");
-let robot2 = new Robot("VIKUEL","Silicon", 100, 1800, 60, 2400, "GXFuel");
-let robot3 = new Robot("DOUBLE_TROUBLE","Germanium", 105, 1700, 65, 2400, "LiquidNitrogen");
-let robot4 = new Robot("Jagger","Arsenic", 110, 1300, 80, 2400, "GXFuel");
-let robot5 = new Robot("Raw","Antimony", 110, 1400, 90, 2400, "LiquidNitrogen");
-let robot6 = new Robot("Manitou","Tellurium", 120, 1500, 100, 2400, "Hydrogen");
-let robot7 = new Robot("D-Mitri","Polonium", 120, 1600, 95, 2400, "Hydrogen");
+let robot1 = new Robot("vitamin","Boron", 90, 1600, 75, 2400, "GXFuel");
+let robot2 = new Robot("vikuel","Silicon", 100, 1800, 60, 2400, "GXFuel");
+let robot3 = new Robot("double_trouble","Germanium", 105, 1700, 65, 2400, "LiquidNitrogen");
+let robot4 = new Robot("jagger","Arsenic", 110, 1300, 80, 2400, "GXFuel");
+let robot5 = new Robot("raw","Antimony", 110, 1400, 90, 2400, "LiquidNitrogen");
+let robot6 = new Robot("manitou","Tellurium", 120, 1500, 100, 2400, "Hydrogen");
+let robot7 = new Robot("d-mitri","Polonium", 120, 1600, 95, 2400, "Hydrogen");
 
 let allRobots = {
     1 : robot1,
