@@ -242,21 +242,23 @@ const inGameDisplay = () => {
 
 const move1 = () => {
 
-    
+
     meters1_show.innerHTML = `<p>${team1.meters}</p>`;
 
-    if(team1.meters >= total_meters){
+    if (team1.meters >= total_meters) {
 
         winner = team1;
-
-        switchScreen(5);
 
         winner_show.innerHTML = `the winner is... <br>
         ${team1.fabrication}`;
 
+        setTimeout(() => {
+            switchScreen(5);
+        }, 1200);
+
     } else {
 
-    team1.accelerate();
+        team1.accelerate();
 
     };
 
@@ -269,7 +271,7 @@ const move2 = () => {
 
     meters2_show.innerHTML = `<p>${team2.meters}</p>`;
 
-    if(team2.meters >= total_meters){
+    if (team2.meters >= total_meters) {
 
         winner = team2;
 
@@ -278,16 +280,20 @@ const move2 = () => {
         winner_show.innerHTML = `the winner is... <br>
         ${team2.fabrication}`;
 
+        setTimeout(() => {
+            switchScreen(5);
+        }, 1200);
+
     } else {
 
-    team2.accelerate();
+        team2.accelerate();
 
     };
 
     console.log(`team 2 - ${team2.meters}`);
     console.log(`the winner is... ${winner}`);
 
-    
+
 
 }
 // KIDNAPPING HTML ELEMENTS
