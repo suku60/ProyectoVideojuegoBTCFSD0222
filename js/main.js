@@ -4,6 +4,7 @@ const resetGame = () => {
     team1 = [];
     team2 = [];
     winner = "";
+    switchScreen(1);
 };
 
 /* switchScreen is what we use to go to the desired screen. What happens here:

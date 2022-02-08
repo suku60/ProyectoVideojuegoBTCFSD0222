@@ -1,46 +1,46 @@
 /* rooting colors for basic robot customization */
 
 :root {
-/* MAIN COLORS */
---color--main-1:#D6C3E5;
---color--main-2:#B77EE5;
---color--main-3:#9F90AA;
---color--main-4:#513866;
---color-detail-1:#AE6AE6;
---color-detail-2:#995D93;
---color-detail-3:#E681DC;
---color-detail-4:#B8E575;
+    /* MAIN COLORS */
+    --color--main-1: #D6C3E5;
+    --color--main-2: #B77EE5;
+    --color--main-3: #9F90AA;
+    --color--main-4: #513866;
+    --color-detail-1: #AE6AE6;
+    --color-detail-2: #995D93;
+    --color-detail-3: #E681DC;
+    --color-detail-4: #B8E575;
 
     /* #116AA6 #FF201F #F2F018 #FF94EE #00E575 #D57AFF #B30056 */
 
-/* vitamin */
---color-vitamin-light: ;
---color-vitamin-medium: #116AA6;
---color-vitamin-dark: ;
-/* vikuel */
---color-vikuel-light: ;
---color-vikuel-medium: #FF201F;
---color-vikuel-dark: ;
-/* doubletrouble */
---color-doubletrouble-light: ;
---color-doubletrouble-medium: #F2F018;
---color-doubletrouble-dark: ;
-/* jagger */
---color-jagger-light: ;
---color-jagger-medium: #FF94EE;
---color-jagger-dark: ;
-/* raw  */
---color-raw-light: ;
---color-raw-medium: #00E575;
---color-raw-dark: ;
-/* manitou */
---color-manitou-light: ;
---color-manitou-medium: #D57AFF;
---color-manitou-dark: ;
-/* dmitri  */
---color-dmitri-light: ;
---color-dmitri-medium: #B30056;
---color-dmitri-dark: ;
+    /* vitamin */
+    --color-vitamin-light: ;
+    --color-vitamin-medium: #116AA6;
+    --color-vitamin-dark: ;
+    /* vikuel */
+    --color-vikuel-light: ;
+    --color-vikuel-medium: #FF201F;
+    --color-vikuel-dark: ;
+    /* doubletrouble */
+    --color-doubletrouble-light: ;
+    --color-doubletrouble-medium: #F2F018;
+    --color-doubletrouble-dark: ;
+    /* jagger */
+    --color-jagger-light: ;
+    --color-jagger-medium: #FF94EE;
+    --color-jagger-dark: ;
+    /* raw  */
+    --color-raw-light: ;
+    --color-raw-medium: #00E575;
+    --color-raw-dark: ;
+    /* manitou */
+    --color-manitou-light: ;
+    --color-manitou-medium: #D57AFF;
+    --color-manitou-dark: ;
+    /* dmitri  */
+    --color-dmitri-light: ;
+    --color-dmitri-medium: #B30056;
+    --color-dmitri-dark: ;
 
 
 }
@@ -172,22 +172,6 @@ body {
 
 }
 
-/*
-.navbar_2:hover {
-    opacity: 80%;
-
-    transition: 0.5s;
-
-    height: 4.5em;
-    width: 54.5em;
-
-    align-items: center;
-    justify-content: center;
-
-    transform: rotateX(180deg);
-
-}
-*/
 
 /* TITLE PROJECT:ROBOSTRIKE */
 
@@ -883,6 +867,8 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    
+    transition: 2s;
 
 }
 
@@ -901,6 +887,8 @@ body {
 
     border-radius: 1em;
 
+    transition: 1s;
+
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -918,6 +906,9 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
+    
+    transition: 1s;
+
 }
 
 .screen_selection_header {
@@ -933,9 +924,13 @@ body {
     align-items: center;
     justify-content: center;
 
+    border-radius: 0.3em;
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3em;
 
+    
+    transition: 1s;
 
 
 }
@@ -953,6 +948,9 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
+    
+    transition: 1s;
+
 }
 
 .screen_selection_robots_cards {
@@ -968,6 +966,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    transition: 1s;
 
 }
 
@@ -989,6 +989,9 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
     font-weight: 600;
+
+    
+    transition: 1s;
 }
 
 .screen_selection_indicator {
@@ -1120,13 +1123,17 @@ body {
 .screen_ingame_front {
     background-color: var(--color-detail-4);
 
-    height: 70vh;
+    opacity: 80%;
+
+    height: 30vh;
     width: 90vw;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    border-radius: 2em;
 
     position: relative;
     z-index: 100;
@@ -1155,6 +1162,8 @@ body {
 
     height: 36em;
     width: 110em;
+
+    border-radius: 1em 1em 0% 0%;
 
     display: flex;
     flex-direction: row;
@@ -1191,6 +1200,7 @@ body {
     align-items: flex-end;
 
 }
+
 .screen_ingame_character_container_stats_full {
     background-color: transparent;
 
@@ -1202,6 +1212,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
+
 .screen_ingame_character_container_stats {
     background-color: transparent;
 
@@ -1217,6 +1228,8 @@ body {
 
 .screen_ingame_character_meters {
     background-color: var(--color--main-2);
+
+
 
     margin: 0%;
     padding: 0%;
@@ -1235,10 +1248,12 @@ body {
 .screen_ingame_character_meters_fixed {
     background-color: var(--color--main-1);
 
+
+
+
+
     height: 2em;
     width: 12em;
-
-    color: whitesmoke;
 
     display: flex;
     flex-direction: column;
@@ -1246,9 +1261,9 @@ body {
     align-items: center;
 
 }
-.screen_ingame_character_meters_variant {
-    background-color: aqua;
 
+.screen_ingame_character_meters_variant {
+    background-color: var(--color--main-1);
     height: 3em;
     width: 12em;
 
@@ -1256,13 +1271,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-
-
 }
 
 .screen_ingame_character_energy {
-    background-color: white;
+    background-color: var(--color--main-2);
 
     margin: 0%;
     padding: 0%;
@@ -1277,9 +1289,8 @@ body {
 
 }
 
-
 .screen_ingame_character_energy_fixed {
-    background-color: red;
+    background-color: var(--color--main-1);
 
     height: 2em;
     width: 12em;
@@ -1288,10 +1299,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
+
 .screen_ingame_character_energy_variant {
-    background-color: red;
+    background-color: var(--color--main-1);
 
     height: 3em;
     width: 12em;
@@ -1300,14 +1311,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-
-
 }
 
 
 .stats_container {
-    background-color: whitesmoke;
+    background-color: var(--color--main-2);
 
     margin: 0%;
     padding: 0%;
@@ -1335,9 +1343,7 @@ body {
 }
 
 .stats_fabrication {
-    background-color: red;
-
-    color: white;
+    background-color: var(--color--main-1);
 
     height: 2em;
     width: 12em;
@@ -1348,9 +1354,8 @@ body {
 }
 
 .stats_meters {
-    background-color: blueviolet;
+    background-color: transparent;
 
-    color: white;
 
     height: 2em;
     width: 12em;
@@ -1361,9 +1366,7 @@ body {
 }
 
 .stats_energy {
-    background-color: green;
-
-    color: white;
+    background-color: transparent;
 
     height: 2em;
     width: 12em;
@@ -1375,12 +1378,18 @@ body {
 
 .screen_ingame_bot {
 
-    background-color: white;
+    background-color: var(--color--main-1);
+
+
+
+
 
     margin-top: 1rem;
 
     height: 9em;
     width: 110em;
+
+    border-radius: 0% 0% 1em 1em;
 
     display: flex;
     flex-direction: row;
@@ -1402,12 +1411,14 @@ body {
 }
 
 .screen_ingame_bot_controls_move {
-    background-color: white;
+    background-color: var(--color--main-1);
 
     height: 2em;
     width: 10em;
 
-    font-size: 1em;
+    font-size: 1rem;
+
+    border-radius: 0.2em;
 
     display: flex;
     align-items: center;
@@ -1417,12 +1428,14 @@ body {
 }
 
 .screen_ingame_bot_controls_attack {
-    background-color: white;
+    background-color: var(--color--main-1);
 
     height: 2em;
     width: 10em;
 
-    font-size: 1em;
+    font-size: 1rem;
+
+    border-radius: 0.2em;
 
     display: flex;
     align-items: center;
@@ -1432,12 +1445,14 @@ body {
 }
 
 .screen_ingame_bot_controls_heal {
-    background-color: white;
+    background-color: var(--color--main-1);
 
     height: 2em;
     width: 10em;
 
-    font-size: 1em;
+    font-size: 1rem;
+
+    border-radius: 0.2em;
 
     display: flex;
     align-items: center;
@@ -1452,7 +1467,7 @@ body {
 
 .screen_credits {
 
-    background-color: blue;
+    background-color: transparent;
 
     height: 85vh;
     width: 100vw;
@@ -1467,14 +1482,16 @@ body {
 
 .winner_class {
 
-    background-color: white;
+    background-color: var(--color-detail-4);
 
     height: 20em;
     width: 25em;
 
-    font-size: 5em;
+    font-size: 2em;
 
     color: black;
+
+    border-radius: 1em;
 
     display: flex;
     flex-direction: column;

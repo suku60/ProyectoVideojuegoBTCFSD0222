@@ -13,6 +13,8 @@
     justify-content: flex-end;
     align-items: center;
 
+    transition: 1s;
+
 }
 
 .screen_welcome_skipbutton {
