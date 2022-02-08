@@ -72,7 +72,7 @@ const inGameDisplay = () => {
 
     document.getElementById("red_start_screen").style.display = "none";
 
-    robotDisplay_team1.innerHTML = `<div class="container_robot">
+    robotDisplay_team1.innerHTML = `<div class="container_robot" id="robot_movement_team1">
     <div class="container_robot_symbol">
         <div class="container_robot_symbol_top">
             <div class="container_robot_symbol_1" id="robot_${team1.fabrication}_1"></div>
@@ -154,7 +154,7 @@ const inGameDisplay = () => {
     </div>
     </div>`;
 
-    robotDisplay_team2.innerHTML = `<div class="container_robot">
+    robotDisplay_team2.innerHTML = `<div class="container_robot" id="robot_movement_team2">
     <div class="container_robot_symbol">
         <div class="container_robot_symbol_top">
             <div class="container_robot_symbol_1" id="robot_${team2.fabrication}_1"></div>
@@ -262,6 +262,8 @@ const move1 = () => {
     } else {
 
         team1.accelerate();
+        document.getElementById("robot_movement_team1").style.marginBottom = (team1.meters*0.128);
+        
 
     };
 
@@ -424,7 +426,9 @@ let startDisplay = document.getElementById("red_start_screen");
 let winner_show = document.getElementById("winner_id");
 let meters1_show = document.getElementById("meters1_show");
 let meters2_show = document.getElementById("meters2_show");
-let energy1_show = document.getElementById("energy1_show")
+let energy1_show = document.getElementById("energy1_show");
+let robot_movement_team1 = document.getElementById("robot_movement_team1");
+let robot_movement_team2 = document.getElementById("robot_movement_team2")
 
 
 

@@ -2,19 +2,37 @@
 
 :root {
 
+    /* #116AA6 #FF201F #F2F018 #FF94EE #00E575 #D57AFF #B30056 */
+
 /* vitamin */
-
+--color-vitamin-light: ;
+--color-vitamin-medium: #116AA6;
+--color-vitamin-dark: ;
 /* vikuel */
-
+--color-vikuel-light: ;
+--color-vikuel-medium: #FF201F;
+--color-vikuel-dark: ;
 /* doubletrouble */
-
+--color-doubletrouble-light: ;
+--color-doubletrouble-medium: #F2F018;
+--color-doubletrouble-dark: ;
 /* jagger */
-
+--color-jagger-light: ;
+--color-jagger-medium: #FF94EE;
+--color-jagger-dark: ;
 /* raw  */
-
+--color-raw-light: ;
+--color-raw-medium: #00E575;
+--color-raw-dark: ;
 /* manitou */
-
+--color-manitou-light: ;
+--color-manitou-medium: #D57AFF;
+--color-manitou-dark: ;
 /* dmitri  */
+--color-dmitri-light: ;
+--color-dmitri-medium: #B30056;
+--color-dmitri-dark: ;
+
 }
 
 
@@ -1146,6 +1164,7 @@ body {
     align-items: center;
 
 }
+
 
 /* red screen for onclick start game */
 
