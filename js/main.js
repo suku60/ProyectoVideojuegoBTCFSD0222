@@ -146,7 +146,14 @@ const inGameDisplay = () => {
         <div class="container_robot_groundpart_3">
         </div>
     </div>`;
-    statsDisplay_team1.innerHTML = `<div class="stats_container"><div class="stats_fabrication">${team1.fabrication}</div><div class="stats_meters">${team1.meters}</div><div class="stats_energy">${team1.energy}</div></div>`;
+    statsDisplay_team1.innerHTML = `<div class="stats_container">
+    <div class="stats_container_rows">
+    <div class="stats_fabrication">NAME</div><div class="stats_meters">METERS</div><div class="stats_energy">ENERGY</div>
+    </div>
+    <div class="stats_container_rows">
+    <div class="stats_fabrication">${team1.fabrication}</div><div class="stats_meters">${team1.meters}</div><div class="stats_energy">${team1.energy}</div>
+    </div>
+    </div>`;
 
     robotDisplay_team2.innerHTML = `<div class="container_robot">
     <div class="container_robot_symbol">
@@ -221,7 +228,14 @@ const inGameDisplay = () => {
         <div class="container_robot_groundpart_3">
         </div>
     </div>`;
-    statsDisplay_team2.innerHTML = `<div class="stats_container"><div class="stats_fabrication">${team2.fabrication}</div><div class="stats_meters">${team2.meters}</div><div class="stats_energy">${team2.energy}</div></div>`;
+    statsDisplay_team2.innerHTML = `<div class="stats_container">
+    <div class="stats_container_rows">
+    <div class="stats_fabrication">NAME</div><div class="stats_meters">METERS</div><div class="stats_energy">ENERGY</div>
+    </div>
+    <div class="stats_container_rows">
+    <div class="stats_fabrication">${team2.fabrication}</div><div class="stats_meters">${team2.meters}</div><div class="stats_energy">${team2.energy}</div>
+    </div>
+    </div>`;
 };
 
 
