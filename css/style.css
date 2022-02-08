@@ -1218,7 +1218,7 @@ body {
     background-color: black;
 
     height: 6em;
-    width: 50em;
+    width: 18em;
 
     display: flex;
     flex-direction: row;
@@ -1234,7 +1234,7 @@ body {
     padding: 0%;
 
     height: 6em;
-    width: 20em;
+    width: 18em;
 
     display: flex;
     flex-direction: column;
@@ -1271,6 +1271,51 @@ body {
 
 }
 
+.screen_ingame_character_energy {
+    background-color: white;
+
+    margin: 0%;
+    padding: 0%;
+
+    height: 6em;
+    width: 18em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+.screen_ingame_character_energy_fixed {
+    background-color: red;
+
+    height: 2em;
+    width: 12em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.screen_ingame_character_energy_variant {
+    background-color: red;
+
+    height: 3em;
+    width: 12em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+
+
 .stats_container {
     background-color: whitesmoke;
 
@@ -1290,7 +1335,7 @@ body {
     background-color: transparent;
 
     height: 6em;
-    width: 35em;
+    width: 18em;
 
     display: flex;
     flex-direction: row;
@@ -2143,27 +2188,27 @@ body {
 
 /* DOUBLE_TROUBLE */
 
-#robot_doubletrouble_1 {}
+#robot_double_trouble_1 {}
 
-#robot_doubletrouble_2 {}
+#robot_double_trouble_2 {}
 
-#robot_doubletrouble_3 {}
+#robot_double_trouble_3 {}
 
-#robot_doubletrouble_4 {}
+#robot_double_trouble_4 {}
 
-#robot_doubletrouble_5 {
+#robot_double_trouble_5 {
     background-color: green;
 
     border-radius: 50% 50% 50% 50%;
 }
 
-#robot_doubletrouble_6 {}
+#robot_double_trouble_6 {}
 
-#robot_doubletrouble_7 {}
+#robot_double_trouble_7 {}
 
-#robot_doubletrouble_8 {}
+#robot_double_trouble_8 {}
 
-#robot_doubletrouble_9 {}
+#robot_double_trouble_9 {}
 
 /* Jagger */
 

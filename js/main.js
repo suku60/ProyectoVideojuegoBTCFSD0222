@@ -147,10 +147,10 @@ const inGameDisplay = () => {
     </div>`;
     statsDisplay_team1.innerHTML = `<div class="stats_container">
     <div class="stats_container_rows">
-    <div class="stats_fabrication">NAME</div><div class="stats_energy">ENERGY</div>
+    <div class="stats_fabrication">NAME</div>
     </div>
     <div class="stats_container_rows">
-    <div class="stats_fabrication">${team1.fabrication}</div><div class="stats_energy">${team1.energy}</div>
+    <div class="stats_fabrication">${team1.fabrication}</div>
     </div>
     </div>`;
 
@@ -229,10 +229,10 @@ const inGameDisplay = () => {
     </div>`;
     statsDisplay_team2.innerHTML = `<div class="stats_container">
     <div class="stats_container_rows">
-    <div class="stats_fabrication">NAME</div><div class="stats_energy">ENERGY</div>
+    <div class="stats_fabrication">NAME</div>
     </div>
     <div class="stats_container_rows">
-    <div class="stats_fabrication">${team2.fabrication}</div><div class="stats_energy">${team2.energy}</div>
+    <div class="stats_fabrication">${team2.fabrication}</div>
     </div>
     </div>`;
 };
@@ -242,14 +242,17 @@ const inGameDisplay = () => {
 
 const move1 = () => {
 
+    
+    meters1_show.innerHTML = `<p>${team1.meters}</p>`;
+
     if(team1.meters >= total_meters){
 
         winner = team1;
 
-        switchScreen(5)
+        switchScreen(5);
 
         winner_show.innerHTML = `the winner is... <br>
-        ${team1.fabrication}`
+        ${team1.fabrication}`;
 
     } else {
 
@@ -257,21 +260,23 @@ const move1 = () => {
 
     };
 
-    console.log(team1.meters)
+    console.log(`${team1.meters}`)
     console.log(winner)
 
 }
 
 const move2 = () => {
 
+    meters2_show.innerHTML = `<p>${team2.meters}</p>`;
+
     if(team2.meters >= total_meters){
 
-        winner = team2
+        winner = team2;
 
-        switchScreen(5)
+        switchScreen(5);
 
         winner_show.innerHTML = `the winner is... <br>
-        ${team2.fabrication}`
+        ${team2.fabrication}`;
 
     } else {
 
@@ -279,8 +284,10 @@ const move2 = () => {
 
     };
 
-    console.log(`team 2 - ${team2.meters}`)
-    console.log(`the winner is... ${winner}`)
+    console.log(`team 2 - ${team2.meters}`);
+    console.log(`the winner is... ${winner}`);
+
+    
 
 }
 // KIDNAPPING HTML ELEMENTS
