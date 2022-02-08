@@ -310,19 +310,19 @@
     <!-- yellow screen / welcome / still has to be developed / video? animation with css? -->
     <section id="screen1">
         <div class="screen_welcome">
-            <div class="screen_welcome_skipbutton" onclick="switchScreen(2)" onclick="resetGame()">SKIP INTRO</div>
+            <div class="screen_welcome_skipbutton" id="rightside_expansion" onclick="switchScreen(2)" onclick="resetGame()">SKIP INTRO</div>
         </div>
     </section>
     <!-- red screen / menu: start settings & exit -->
     <section id="screen2" style="display:none">
         <div class="screen_menu">
-            <div class="screen_menu_exit" onclick="">HOW TO PLAY
+            <div class="screen_menu_button" onclick="">HOW TO PLAY
             </div>
-            <div class="screen_menu_start" onclick="switchScreen(3)">START
+            <div class="screen_menu_button" onclick="switchScreen(3)">START
             </div>
-            <div class="screen_menu_settings">SETTINGS
+            <div class="screen_menu_button">SETTINGS
             </div>
-            <div class="screen_menu_exit" onclick="switchScreen(1)">EXIT
+            <div class="screen_menu_button" onclick="switchScreen(1)">EXIT
             </div>
         </div>
     </section>
