@@ -1,9 +1,7 @@
 /* screen1 */
 
 .screen_welcome {
-
     background-color: transparent;
-
 
     height: 85vh;
     width: 100vw;
@@ -14,24 +12,19 @@
     align-items: center;
 
     transition: 1s;
-
 }
 
 .screen_welcome_skipbutton {
-
     background-color: black;
 
     height: 5em;
     width: 40em;
 
     border-radius: 1em 0em 0em 1em;
-
     color: whitesmoke;
-
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
     padding: 1em;
 }
 
@@ -48,9 +41,7 @@
         -webkit-transform: translateX(100%);
         -o-transform: translateX(100%);
         transform: translateX(100%);
-    }
-
-    to {
+    } to {
         -webkit-transform: translateX(0%);
         -o-transform: translateX(0%);
         transform: translateX(0%);
@@ -63,9 +54,7 @@
         -moz-transform: translateX(100%);
         -o-transform: translateX(100%);
         transform: translateX(100%);
-    }
-
-    to {
+    } to {
         -ms-transform: translateX(0%);
         -moz-transform: translateX(0%);
         -o-transform: translateX(0%);

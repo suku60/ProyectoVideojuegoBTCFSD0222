@@ -11,8 +11,6 @@
     --color-detail-3: #E3BFE1;
     --color-detail-4: #B4D6D3;
 
-    /* #116AA6 #FF201F #F2F018 #FF94EE #00E575 #D57AFF #B30056 */
-
     /* vitamin */
     --color-vitamin-light: #1b92dc;
     --color-vitamin-medium: #116AA6;
@@ -41,27 +39,19 @@
     --color-dmitri-light: #f33f96;
     --color-dmitri-medium: #B30056;
     --color-dmitri-dark: #5a1f3c;
-
-
 }
 
 body {
-
     background-color: var(--color--main-4);
-
 
     height: 100vh;
     width: 100vw;
     max-height: 100vh;
     max-width: 100vw;
-
     margin: 0em;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 /* NAVBAR */
@@ -109,17 +99,14 @@ body {
 /* we still have to figure something special for these little fellas */
 
 #navbar_robot_detail {
-    background-color: crimson;
-
+    background-color: var(--color-vikuel-medium);
 }
 
 .logo_navbar {
-
     background-color: var(--color--main-1);
 
     height: 15vh;
     width: 90vw;
-
 
     display: flex;
     flex-direction: row;
@@ -127,8 +114,6 @@ body {
     align-items: center;
 
     transition: 0.5s;
-
-
 }
 
 .logo_navbar:hover {

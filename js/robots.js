@@ -1,9 +1,6 @@
 let team1 = "";
-
 let team2 = "";
-
 let winner = "";
-
 let total_meters = 2000;
 
 class Robot {
@@ -36,7 +33,6 @@ class Robot {
     move_up() {
         return this.movement += this.meters/1900;
     }
-
 };
 
 let robot1 = new Robot("vitamin","Boron",1.1, 900, 1600, 75, 2400, "GXFuel");

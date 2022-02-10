@@ -18,7 +18,6 @@ const resetGame = () => {
 
 };
 
-
 /* switchScreen is what we use to go to the desired screen. What happens here:
 - screenNumber obtains a value. 
 - We declare allScreens as an array with a string of every screen.
@@ -43,15 +42,11 @@ const switchScreen = (screenNumber) => {
     for (let screenTemporary of allScreens) {
 
         document.getElementById(screenTemporary).style.display = "none";
-
     }
-
-
 }
 
 /* selectRobot is a constant that we create for the team selection screen, which allow us to include the robots
 inside them */
-
 
 const selectRobot = (numberRobot) => {
 
@@ -80,7 +75,6 @@ const selectRobot = (numberRobot) => {
 }
 
 // inGameDisplay is a constant that will update our stats in-game, setting every image that we need and everything we need to show on screen.
-
 
 const inGameDisplay = () => {
 
@@ -167,7 +161,6 @@ const inGameDisplay = () => {
     <div class="stats_fabrication">${team1.fabrication}</div>
     </div>
     </div>`;
-
     robotDisplay_team2.innerHTML = `<div class="container_robot" id="robot_movement_team2">
     <div class="container_robot_symbol">
         <div class="container_robot_symbol_top">
@@ -251,19 +244,15 @@ const inGameDisplay = () => {
     </div>`;
 };
 
-
 // InGame action buttons
-
 
 // MOVEMENT 
 
 const move1 = () => {
 
-
     if (team1.meters >= total_meters) {
 
         winner = team1;
-
         winner_show.innerHTML = `the winner is... <br>
         ${team1.fabrication}`;
 
@@ -277,21 +266,15 @@ const move1 = () => {
         team1.move_up();
 
         document.getElementById("robot_team1").style.paddingBottom = `${team1.movement}` + "em";
-
-
     };
 
-
     meters1_show.innerHTML = `<p>${team1.meters}</p>`;
-
     console.log(`team 1 movement is ${team1.movement}`)
     console.log(`team 1 reached ${team1.meters} meters`)
     console.log(`the winner is ${winner}`)
-
 }
 
 const move2 = () => {
-
 
     if (team2.meters >= total_meters) {
 
@@ -315,9 +298,7 @@ const move2 = () => {
 
     };
 
-
     meters2_show.innerHTML = `<p>${team2.meters}</p>`;
-
     console.log(`team 2 reached ${team2.meters} meters`);
     console.log(`the winner is... ${winner}`);
 }
@@ -328,11 +309,8 @@ const healing1 = () => {
 
     if (team1.energy <= 0) {
 
-
         console.log(`consolelog ha entrado en el if ${team1.energy}`)
-
         winner = team2;
-
         winner_show.innerHTML = `the winner is... <br>
         ${team2.fabrication}`;
 
@@ -343,11 +321,7 @@ const healing1 = () => {
     } else {
 
         console.log(`consolelog else ${team1.energy}`)
-
         team1.heal();
-
-
-
     };
 
     energy1_show.innerHTML = `<p>${team1.energy}</p>`;
@@ -362,7 +336,6 @@ const healing2 = () => {
     if (team1.energy <= 0) {
 
         winner = team1;
-
         winner_show.innerHTML = `the winner is... <br>
         ${team2.fabrication}`;
 
@@ -373,26 +346,21 @@ const healing2 = () => {
     } else {
 
         team2.heal();
-
     };
-
 
     energy2_show.innerHTML = `<p>${team2.energy}</p>`;
 
     console.log(`energy team 2 is ${team2.energy}`)
     console.log(`the winner is ${winner}`)
-
 }
 
 // ATTACK
 
 const shooting1 = () => {
 
-
     if (team2.energy > 0) {
 
         team2.take_damage();
-
 
         energy2_show.innerHTML = `<p>${team2.energy}</p>`;
 
@@ -403,15 +371,10 @@ const shooting1 = () => {
         winner_show.innerHTML = `the winner is... <br>
         ${team1.fabrication}`;
 
-
-
         setTimeout(() => {
             switchScreen(5);
         }, 1200);
-
-
     };
-
 
     console.log(`energy team 2 is ${team2.energy}`)
     console.log(`the winner is ${winner}`)
@@ -420,11 +383,9 @@ const shooting1 = () => {
 
 const shooting2 = () => {
 
-
     if (team1.energy > 0) {
 
         team1.take_damage();
-
 
         energy1_show.innerHTML = `<p>${team1.energy}</p>`;
 
@@ -438,18 +399,11 @@ const shooting2 = () => {
         setTimeout(() => {
             switchScreen(5);
         }, 1200);
-
-
     };
-
-
 
     console.log(`energy team 1 is ${team1.energy}`)
     console.log(`the winner is ${winner}`)
-
 }
-
-
 
 // KIDNAPPING HTML ELEMENTS
 
@@ -465,10 +419,3 @@ let meters2_show = document.getElementById("meters2_show");
 let energy1_show = document.getElementById("energy1_show");
 let robot_movement_team1 = document.getElementById("robot_movement_team1");
 let robot_movement_team2 = document.getElementById("robot_movement_team2")
-
-
-
-// document.body.addEventListener("keydown", (ev) => {
-
-//     if(screen3.style.display == "block")
-// });
