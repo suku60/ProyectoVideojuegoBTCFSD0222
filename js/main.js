@@ -266,7 +266,10 @@ const move1 = () => {
         team1.move_up();
 
         document.getElementById("robot_team1").style.paddingBottom = `${team1.movement}` + "em";
+        
     };
+
+    
 
     meters1_show.innerHTML = `<p>${team1.meters}</p>`;
     console.log(`team 1 movement is ${team1.movement}`)

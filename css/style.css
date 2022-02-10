@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 /* rooting colors for basic robot customization */
 
 :root {
@@ -52,6 +55,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+
+    font-family: 'Bebas Neue', cursive;
+    font-size: large;
 }
 
 /* NAVBAR */
@@ -851,7 +858,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    
+
     transition: 2s;
 
 }
@@ -874,7 +881,6 @@ body {
     transition: 1s;
 
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -909,7 +915,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
-    
+
     transition: 1s;
 
 }
@@ -929,10 +935,9 @@ body {
 
     border-radius: 0.3em;
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3em;
 
-    
+
     transition: 1s;
 
 
@@ -951,7 +956,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
-    
+
     transition: 1s;
 
 }
@@ -989,11 +994,10 @@ body {
     justify-content: center;
 
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
     font-weight: 600;
 
-    
+
     transition: 1s;
 }
 
@@ -1055,7 +1059,6 @@ body {
     align-items: center;
     text-align: center;
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
     font-weight: 400;
 
@@ -1130,7 +1133,6 @@ body {
     align-items: center;
     text-align: center;
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
     font-weight: 400;
 
@@ -1269,7 +1271,7 @@ body {
     height: 29em;
     width: 50em;
 
-    border-radius: 1em 1em 0 0 ;
+    border-radius: 1em 1em 0 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1457,11 +1459,6 @@ body {
     background-color: var(--color--main-1);
 
 
-
-
-
-    margin-top: 1rem;
-
     height: 9em;
     width: 110em;
 
@@ -1475,12 +1472,11 @@ body {
 }
 
 .screen_ingame_bot_controls {
-    background-color: var(--color--main-2);
+    background-color: var(--color--main-4);
 
     height: 8em;
     width: 50em;
 
-    border-radius: 0 0 1em 1em;
 
     display: flex;
     flex-direction: row;
@@ -1492,9 +1488,11 @@ body {
     background-color: var(--color--main-3);
 
     height: 2em;
-    width: 10em;
+    width: 3em;
 
-    font-size: 1rem;
+    padding: 0;
+
+    font-size: 3rem;
 
     border-radius: 0.2em;
 
@@ -1506,12 +1504,14 @@ body {
 
 
 }
+
 .screen_ingame_bot_controls_move:hover {
     background-color: var(--color--main-2);
 
-    height: 3em;
+    height: 2.9em;
     width: 11m;
 
+    border-radius: 0%;
     border: 0.1rem black;
     border-style: solid;
 
@@ -1525,12 +1525,14 @@ body {
     background-color: var(--color--main-3);
 
     height: 2em;
-    width: 10em;
+    width: 8em;
 
-    font-size: 1rem;
+    padding: 0;
+
+    font-size: 3rem;
 
     border-radius: 0.2em;
-    
+
     transition: 1s;
 
     display: flex;
@@ -1541,10 +1543,12 @@ body {
 }
 
 .screen_ingame_bot_controls_attack:hover {
-    background-color: var(--color--main-2);
+    background-color: var(--color-vikuel-medium);
 
-    height: 3em;
+    height: 2.9em;
     width: 11m;
+
+    border-radius: 0%;
 
     border: 0.1rem black;
     border-style: solid;
@@ -1559,13 +1563,15 @@ body {
     background-color: var(--color--main-3);
 
     height: 2em;
-    width: 10em;
+    width: 8em;
 
-    font-size: 1rem;
+    padding: 0;
+
+    font-size: 3rem;
 
     border-radius: 0.2em;
 
-    
+
     transition: 1s;
 
     display: flex;
@@ -1574,11 +1580,14 @@ body {
 
 
 }
-.screen_ingame_bot_controls_heal:hover {
-    background-color: var(--color--main-2);
 
-    height: 3em;
+.screen_ingame_bot_controls_heal:hover {
+    background-color: var(--color-raw-light);
+
+    height: 2.9em;
     width: 11m;
+
+    border-radius: 0%;
 
     border: 0.1rem black;
     border-style: solid;
@@ -1640,7 +1649,7 @@ body {
     width: 5em;
 
     position: relative;
-    
+
 
 
 }
@@ -2296,14 +2305,14 @@ body {
 }
 
 #robot_vitamin_6 {
-    
+
     background-color: var(--color-vitamin-light);
 
     border-radius: 1em 0 1em 0;
 }
 
 #robot_vitamin_7 {
-    
+
     background-color: var(--color-vitamin-dark);
 
     border-radius: 0 1em 0 1em;
@@ -2321,7 +2330,7 @@ body {
 }
 
 #robot_vitamin_9 {
-    
+
     background-color: var(--color-vitamin-dark);
 
     border-radius: 1em 0 1em 0;
@@ -2338,7 +2347,7 @@ body {
 #robot_vikuel_3 {}
 
 #robot_vikuel_4 {
-    
+
     background-color: var(--color-vikuel-medium);
 
     border-radius: 0 0 50% 50%;
@@ -2353,7 +2362,7 @@ body {
 }
 
 #robot_vikuel_6 {
-    
+
     background-color: var(--color-vikuel-medium);
 
     border-radius: 0 0 50% 50%;
@@ -2378,8 +2387,9 @@ body {
     background-color: var(--color-doubletrouble-light);
     height: 0.5em;
 
-    
-    border-radius: 0% 50% 50% 50%;}
+
+    border-radius: 0% 50% 50% 50%;
+}
 
 #robot_double_trouble_5 {
     background-color: var(--color-doubletrouble-medium);
@@ -2391,8 +2401,9 @@ body {
     background-color: var(--color-doubletrouble-light);
     height: 0.5em;
 
-    
-    border-radius: 50% 0% 50% 0%;}
+
+    border-radius: 50% 0% 50% 0%;
+}
 
 #robot_double_trouble_7 {
     background-color: var(--color-doubletrouble-light);
@@ -2400,32 +2411,35 @@ body {
 
     opacity: 30%;
 
-    
-    border-radius: 50% 0% 0% 50%;}
+
+    border-radius: 50% 0% 0% 50%;
+}
 
 #robot_double_trouble_8 {
     background-color: var(--color-doubletrouble-light);
     height: 0.5em;
 
-    
+
     opacity: 30%;
-    
-    border-radius: 50% 50% 0% 0%;}
+
+    border-radius: 50% 50% 0% 0%;
+}
 
 #robot_double_trouble_9 {
     background-color: var(--color-doubletrouble-light);
     height: 0.5em;
-    
+
     opacity: 30%;
 
-    
-    border-radius: 50% 50% 50% 0%;}
+
+    border-radius: 50% 50% 50% 0%;
+}
 
 /* Jagger */
 
 #robot_jagger_1 {
     background-color: var(--color-jagger-medium);
-    
+
     border-radius: 1em 0 0 0;
     opacity: 30%;
 }
@@ -2459,7 +2473,7 @@ body {
 
 #robot_jagger_7 {
     background-color: var(--color-jagger-medium);
-    
+
     border-radius: 0 0 0 1em;
     opacity: 30%;
 }
@@ -2478,7 +2492,8 @@ body {
     background-color: var(--color-jagger-medium);
 
     border-radius: 0 0 1em 0;
-    opacity: 30%;}
+    opacity: 30%;
+}
 
 /* Raw */
 
@@ -2492,17 +2507,20 @@ body {
     background-color: var(--color-raw-dark);
 
     opacity: 50%;
-    height: 0.3em;}
+    height: 0.3em;
+}
 
 #robot_raw_3 {
     background-color: var(--color-raw-dark);
 
-    height: 0.3em;}
+    height: 0.3em;
+}
 
 #robot_raw_4 {
     background-color: var(--color-raw-dark);
 
-    height: 0.3em;}
+    height: 0.3em;
+}
 
 #robot_raw_5 {
     background-color: var(--color-raw-medium);
@@ -2513,23 +2531,27 @@ body {
 #robot_raw_6 {
     background-color: var(--color-raw-dark);
 
-    height: 0.3em;}
+    height: 0.3em;
+}
 
 #robot_raw_7 {
     background-color: var(--color-raw-dark);
 
-    height: 0.3em;}
+    height: 0.3em;
+}
 
 #robot_raw_8 {
     background-color: var(--color-raw-dark);
-opacity: 50%;
+    opacity: 50%;
 
-    height: 0.3em;}
+    height: 0.3em;
+}
 
 #robot_raw_9 {
     background-color: var(--color-raw-dark);
 
-    height: 0.3em;}
+    height: 0.3em;
+}
 
 /* Manitou */
 
@@ -2576,7 +2598,8 @@ opacity: 50%;
 }
 
 #robot_manitou_8 {
-    background-color: var(--color-manitou-medium)}
+    background-color: var(--color-manitou-medium)
+}
 
 #robot_manitou_9 {
     background-color: var(--color-manitou-light);
@@ -2589,25 +2612,23 @@ opacity: 50%;
 
 
 #robot_dmitri_1 {
-    
+
     background-color: var(--color-dmitri-medium);
 
     border-radius: 1em 1em 0 0;
 }
 
-#robot_dmitri_2 {
-
-}
+#robot_dmitri_2 {}
 
 #robot_dmitri_3 {
-    
+
     background-color: var(--color-dmitri-medium);
 
     border-radius: 1em 1em 0 0;
 }
 
 #robot_dmitri_4 {
-    
+
     background-color: var(--color-dmitri-medium);
 }
 
@@ -2618,33 +2639,26 @@ opacity: 50%;
 }
 
 #robot_dmitri_6 {
-    
+
     background-color: var(--color-dmitri-medium);
 
 }
 
 #robot_dmitri_7 {
-    
+
     background-color: var(--color-dmitri-medium);
-    
+
     border-radius: 0 0 0 1em;
 }
 
 #robot_dmitri_8 {
-    
+
     background-color: var(--color-dmitri-light);
 }
 
 #robot_dmitri_9 {
-    
+
     background-color: var(--color-dmitri-medium);
 
     border-radius: 0 0 1em 0;
 }
-
-
-
-
-
-
-
