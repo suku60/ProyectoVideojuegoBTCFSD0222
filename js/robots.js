@@ -1,7 +1,7 @@
 let team1 = "";
 let team2 = "";
 let winner = "";
-let total_meters = 2000;
+let total_meters = 1925;
 
 class Robot {
 
