@@ -329,7 +329,7 @@
     <!-- steel screen / selection -->
     <section id="screen3" style="display:none">
         <div class="screen_selection">
-            <div class="screen_selection_header">SELECT YOUR ROBOT
+            <div class="screen_selection_header">SELECT ROBOTS FOR TEAM 1 & 2
             </div>
             <div class="screen_selection_robots">
                 <!-- Vitamin -->
@@ -894,10 +894,15 @@
                 </div>
             </div>
             <div class="screen_selection_indicator">
-                <div class="robotData" id="data1">
-
+                <div class="data_container">
+                    <div class="team_data">T E A M   1</div>
+                    <div class="robotData" id="data1">
+                    </div>
                 </div>
-                <div class="robotData" id="data2">
+                <div class="data_container">
+                    <div class="team_data">T E A M   2</div>
+                    <div class="robotData" id="data2">
+                    </div>
                 </div>
                 <div class="screen_selection_play_button" id="play_button_indicator">
                 </div>
@@ -963,9 +968,9 @@
 
     </section>
     <!-- credits screen -->
-    <section id="screen5" style="display:none" onclick="resetGame()">
+    <section id="screen5" style="display:none">
         <div class="screen_credits">
-            <div id="winner_id" class="winner_class"></div>
+            <div id="winner_id" class="winner_class" onclick="resetGame()"></div>
         </div>
     </section>
 

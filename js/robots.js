@@ -4,7 +4,7 @@ let team2 = "";
 
 let winner = "";
 
-let total_meters = 3000;
+let total_meters = 2000;
 
 
 class Robot {
@@ -41,7 +41,7 @@ let robot3 = new Robot("double_trouble","Germanium",1.1, 1250, 1700, 65, 2400, "
 let robot4 = new Robot("jagger","Arsenic",1.2, 1100, 1300, 80, 2400, "GXFuel");
 let robot5 = new Robot("raw","Antimony",1.1, 1200, 1400, 90, 2400, "LiquidNitrogen");
 let robot6 = new Robot("manitou","Tellurium",1.2, 1100, 1500, 100, 2400, "Hydrogen");
-let robot7 = new Robot("d-mitri","Polonium",1.1, 1200, 1600, 95, 2400, "Hydrogen");
+let robot7 = new Robot("dmitri","Polonium",1.1, 1200, 1600, 95, 2400, "Hydrogen");
 
 let allRobots = {
     1 : robot1,

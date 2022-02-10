@@ -1,11 +1,13 @@
 // resetGame clears everything so it is empty and available to be filled (play) once again.
 
 const resetGame = () => {
-    team1 = [];
-    team2 = [];
+    team1 = "";
+    team2 = "";
     winner = "";
     switchScreen(1);
+
 };
+
 
 /* switchScreen is what we use to go to the desired screen. What happens here:
 - screenNumber obtains a value. 
@@ -262,11 +264,11 @@ const move1 = () => {
 
     } else {
 
-        team1.accelerate();
-        document.getElementById("robot_movement_team1").style.marginBottom = (team1.meters*0.128);
-        
+        team1.accelerate();        
 
     };
+
+    document.getElementById("robot_team1").style.paddingBottom = ``;
 
     console.log(`team 1 reached ${team1.meters} meters`)
     console.log(`the winner is ${winner}`)
@@ -307,7 +309,7 @@ const healing1 = () => {
 
     energy1_show.innerHTML = `<p>${team1.energy}</p>`;
 
-    if (team1.energy == 0) {
+    if (team1.energy <= 0) {
 
         winner = team2;
 
@@ -334,7 +336,7 @@ const healing2 = () => {
 
     energy2_show.innerHTML = `<p>${team2.energy}</p>`;
 
-    if (team1.energy == 0) {
+    if (team1.energy <= 0) {
 
         winner = team1;
 
