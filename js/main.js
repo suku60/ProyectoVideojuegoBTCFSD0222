@@ -1,10 +1,20 @@
 // resetGame clears everything so it is empty and available to be filled (play) once again.
+let firstRobot = "";
+let secondRobot = "";
 
 const resetGame = () => {
+
     team1 = "";
     team2 = "";
     winner = "";
+    allRobots = "";
+
+    firstRobot.classList.remove("Selected_Robot");
+    secondRobot.classList.remove("Selected_Robot");
+
     switchScreen(1);
+    
+    location.reload();
 
 };
 
@@ -47,7 +57,8 @@ const selectRobot = (numberRobot) => {
 
     if (team1 == "") {
         team1 = allRobots[numberRobot];
-        let firstRobot = document.getElementById(numberRobot)
+        console.log(`${numberRobot}`)
+        firstRobot = document.getElementById(numberRobot)
         let robotData = document.getElementById("data" + 1);
         firstRobot.onclick = "";
         firstRobot.classList.add("Selected_Robot");
@@ -55,7 +66,7 @@ const selectRobot = (numberRobot) => {
 
     } else if (team2 == "") {
         team2 = allRobots[numberRobot];
-        let secondRobot = document.getElementById(numberRobot)
+        secondRobot = document.getElementById(numberRobot)
         robotData = document.getElementById("data" + 2);
         secondRobot.onclick = "";
         secondRobot.classList.add("Selected_Robot");
@@ -249,8 +260,6 @@ const inGameDisplay = () => {
 const move1 = () => {
 
 
-    meters1_show.innerHTML = `<p>${team1.meters}</p>`;
-
     if (team1.meters >= total_meters) {
 
         winner = team1;
@@ -266,12 +275,14 @@ const move1 = () => {
 
         team1.accelerate();
         team1.move_up();
-        
-        document.getElementById("robot_team1").style.paddingBottom = `${team1.movement}`+"em";
+
+        document.getElementById("robot_team1").style.paddingBottom = `${team1.movement}` + "em";
 
 
     };
 
+
+    meters1_show.innerHTML = `<p>${team1.meters}</p>`;
 
     console.log(`team 1 movement is ${team1.movement}`)
     console.log(`team 1 reached ${team1.meters} meters`)
@@ -281,7 +292,6 @@ const move1 = () => {
 
 const move2 = () => {
 
-    meters2_show.innerHTML = `<p>${team2.meters}</p>`;
 
     if (team2.meters >= total_meters) {
 
@@ -299,8 +309,14 @@ const move2 = () => {
     } else {
 
         team2.accelerate();
+        team2.move_up();
+
+        document.getElementById("robot_team2").style.paddingBottom = `${team2.movement}` + "em";
 
     };
+
+
+    meters2_show.innerHTML = `<p>${team2.meters}</p>`;
 
     console.log(`team 2 reached ${team2.meters} meters`);
     console.log(`the winner is... ${winner}`);
@@ -310,10 +326,10 @@ const move2 = () => {
 
 const healing1 = () => {
 
-
-    energy1_show.innerHTML = `<p>${team1.energy}</p>`;
-
     if (team1.energy <= 0) {
+
+
+        console.log(`consolelog ha entrado en el if ${team1.energy}`)
 
         winner = team2;
 
@@ -326,9 +342,15 @@ const healing1 = () => {
 
     } else {
 
+        console.log(`consolelog else ${team1.energy}`)
+
         team1.heal();
 
+
+
     };
+
+    energy1_show.innerHTML = `<p>${team1.energy}</p>`;
 
     console.log(`energy team 1 is ${team1.energy}`)
     console.log(`the winner is ${winner}`)
@@ -336,9 +358,6 @@ const healing1 = () => {
 }
 
 const healing2 = () => {
-
-
-    energy2_show.innerHTML = `<p>${team2.energy}</p>`;
 
     if (team1.energy <= 0) {
 
@@ -357,6 +376,9 @@ const healing2 = () => {
 
     };
 
+
+    energy2_show.innerHTML = `<p>${team2.energy}</p>`;
+
     console.log(`energy team 2 is ${team2.energy}`)
     console.log(`the winner is ${winner}`)
 
@@ -367,11 +389,12 @@ const healing2 = () => {
 const shooting1 = () => {
 
 
-    energy2_show.innerHTML = `<p>${team2.energy}</p>`;
-
     if (team2.energy > 0) {
 
         team2.take_damage();
+
+
+        energy2_show.innerHTML = `<p>${team2.energy}</p>`;
 
     } else {
 
@@ -380,12 +403,15 @@ const shooting1 = () => {
         winner_show.innerHTML = `the winner is... <br>
         ${team1.fabrication}`;
 
+
+
         setTimeout(() => {
             switchScreen(5);
         }, 1200);
 
 
     };
+
 
     console.log(`energy team 2 is ${team2.energy}`)
     console.log(`the winner is ${winner}`)
@@ -395,11 +421,12 @@ const shooting1 = () => {
 const shooting2 = () => {
 
 
-    energy1_show.innerHTML = `<p>${team1.energy}</p>`;
-
     if (team1.energy > 0) {
 
         team1.take_damage();
+
+
+        energy1_show.innerHTML = `<p>${team1.energy}</p>`;
 
     } else {
 
@@ -414,6 +441,8 @@ const shooting2 = () => {
 
 
     };
+
+
 
     console.log(`energy team 1 is ${team1.energy}`)
     console.log(`the winner is ${winner}`)

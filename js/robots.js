@@ -6,7 +6,6 @@ let winner = "";
 
 let total_meters = 2000;
 
-
 class Robot {
 
     constructor(fabrication, element, element_multiplier, speed, weight, damage, energy,  fuel, movement) {
