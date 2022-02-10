@@ -45,7 +45,6 @@
 
 }
 
-
 body {
 
     background-color: var(--color--main-4);
@@ -1222,6 +1221,12 @@ body {
     border: 0.1rem black;
     border-style: solid;
 
+}
+
+.startSquare {
+
+    height: 4em;
+    width: 10em;
 }
 
 /* actual game screen */

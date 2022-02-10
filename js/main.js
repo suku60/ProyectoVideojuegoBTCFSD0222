@@ -264,12 +264,16 @@ const move1 = () => {
 
     } else {
 
-        team1.accelerate();        
+        team1.accelerate();
+        team1.move_up();
+        
+        document.getElementById("robot_team1").style.paddingBottom = `${team1.movement}`+"em";
+
 
     };
 
-    document.getElementById("robot_team1").style.paddingBottom = ``;
 
+    console.log(`team 1 movement is ${team1.movement}`)
     console.log(`team 1 reached ${team1.meters} meters`)
     console.log(`the winner is ${winner}`)
 
@@ -365,7 +369,7 @@ const shooting1 = () => {
 
     energy2_show.innerHTML = `<p>${team2.energy}</p>`;
 
-    if (team2.energy > 0 ) {
+    if (team2.energy > 0) {
 
         team2.take_damage();
 
@@ -393,7 +397,7 @@ const shooting2 = () => {
 
     energy1_show.innerHTML = `<p>${team1.energy}</p>`;
 
-    if (team1.energy > 0 ) {
+    if (team1.energy > 0) {
 
         team1.take_damage();
 

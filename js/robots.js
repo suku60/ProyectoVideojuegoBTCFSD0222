@@ -9,7 +9,7 @@ let total_meters = 2000;
 
 class Robot {
 
-    constructor(fabrication, element, element_multiplier, speed, weight, damage, energy,  fuel) {
+    constructor(fabrication, element, element_multiplier, speed, weight, damage, energy,  fuel, movement) {
         this.fabrication = fabrication;
         this.element = element;
         this.element_multiplier = element_multiplier;
@@ -18,6 +18,7 @@ class Robot {
         this.damage = damage;
         this.energy = energy;
         this.fuel = fuel;
+        this.movement = 0;
         this.meters = 0;
     }
 
@@ -31,6 +32,10 @@ class Robot {
 
     take_damage() {
         return this.energy -= (100/this.element_multiplier)+this.damage;
+    }
+
+    move_up() {
+        return this.movement += this.meters/1900;
     }
 
 };

@@ -310,7 +310,8 @@
     <!-- yellow screen / welcome / still has to be developed / video? animation with css? -->
     <section id="screen1">
         <div class="screen_welcome">
-            <div class="screen_welcome_skipbutton" id="rightside_expansion" onclick="switchScreen(2)" onclick="resetGame()">SKIP INTRO</div>
+            <div class="screen_welcome_skipbutton" id="rightside_expansion" onclick="switchScreen(2)"
+                onclick="resetGame()">SKIP INTRO</div>
         </div>
     </section>
     <!-- red screen / menu: start settings & exit -->
@@ -895,12 +896,12 @@
             </div>
             <div class="screen_selection_indicator">
                 <div class="data_container">
-                    <div class="team_data">T E A M   1</div>
+                    <div class="team_data">T E A M 1</div>
                     <div class="robotData" id="data1">
                     </div>
                 </div>
                 <div class="data_container">
-                    <div class="team_data">T E A M   2</div>
+                    <div class="team_data">T E A M 2</div>
                     <div class="robotData" id="data2">
                     </div>
                 </div>
@@ -913,7 +914,15 @@
     <section id="screen4" style="display:none">
         <div class="screen_ingame">
             <!-- red start screen -->
-            <div class="screen_ingame_front" id="red_start_screen" onclick="inGameDisplay()">CLICK HERE TO START YOUR FIGHT</div>
+            <div class="screen_ingame_front" id="red_start_screen" onclick="inGameDisplay()">
+                WINNING CONDITIONS:<br>
+                REACH 2000 meters<br>
+                KILL YOUR OPONENT<br>
+                <br>
+                <br>
+                <div class="startSquare">
+                    CLICK HERE TO START YOUR FIGHT</div>
+            </div>
             <!-- actual fight screen -->
             <div class="screen_ingame_back">
                 <div class="screen_ingame_top">
