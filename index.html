@@ -13,14 +13,26 @@
     <div id="gameScreen">    
         <canvas></canvas>
     </div>
-    <div id="gameControls">
-        <div class="controlsGrid">
-            <div type="button">-</div>   
-            <div type="button">↑</div>   
-            <div type="button">-</div>   
-            <div type="button">←</div>   
-            <div type="button">↓</div>   
-            <div type="button">→</div>   
+    <div id="interface" class="interface">
+        <div id="gameDirections">
+            <div class="directionsGrid">
+                <div id="moveSlot1"></div>
+                <div id="moveSlot2"></div>
+                <div id="moveSlot3"></div>
+                <div id="moveSlot4"></div>
+                <div id="moveSlot5"></div>
+                <div id="moveSlot6"></div>
+            </div>
+        </div>
+        <div id="gameControls">
+            <div class="controlsGrid">
+                <div type="button" onclick=executeMovement()>GO</div>   
+                <div type="button" onclick=setMovement(1)>↑</div>   
+                <div type="button" >-</div>   
+                <div type="button" onclick=setMovement(3)>←</div>   
+                <div type="button" onclick=setMovement(2)>↓</div>   
+                <div type="button" onclick=setMovement(4)>→</div>   
+            </div>
         </div>
     </div>
 
