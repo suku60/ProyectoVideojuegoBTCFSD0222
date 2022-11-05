@@ -1,424 +1,172 @@
-// resetGame clears everything so it is empty and available to be filled (play) once again.
-let firstRobot = "";
-let secondRobot = "";
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+const gameScreen = document.getElementById("gameScreen");
 
-const resetGame = () => {
+const height = 750;
+const width = 1150;
 
-    team1 = "";
-    team2 = "";
-    winner = "";
-    allRobots = "";
+canvas.height = height
+canvas.width = width
 
-    firstRobot.classList.remove("Selected_Robot");
-    secondRobot.classList.remove("Selected_Robot");
+ctx.fillStyle = "red"
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    switchScreen(1);
-    
-    location.reload();
-
-};
-
-/* switchScreen is what we use to go to the desired screen. What happens here:
-- screenNumber obtains a value. 
-- We declare allScreens as an array with a string of every screen.
-- Using .filter we make allScreen equal as the desired screen using the value asigned throw screenNumber. 
-Then we declare with ! that we want to get all the screens that are not the desired screen so we can give
-them the "display=none" property.
-- We give the "diaplay=block" property to the desired screen. (The name we asign here is temporary, and will
-be a momentary naming for the screens)
-- With a for, we declare this temporary naming and asign the "display=none" property to the undesired screens.
-*/
-
-const switchScreen = (screenNumber) => {
-
-    let screenDesired = "screen" + screenNumber;
-
-    let allScreens = ["screen1", "screen2", "screen3", "screen4", "screen5"];
-
-    allScreens = allScreens.filter(screenNumber => !screenDesired.includes(screenNumber));
-
-    document.getElementById(screenDesired).style.display = "block";
-
-    for (let screenTemporary of allScreens) {
-
-        document.getElementById(screenTemporary).style.display = "none";
-    }
+let robotPosition = {
+    x: 0,
+    y: 0
 }
 
-/* selectRobot is a constant that we create for the team selection screen, which allow us to include the robots
-inside them */
+class Robot {
 
-const selectRobot = (numberRobot) => {
+    constructor({position, radius, color}) {
 
-    if (team1 == "") {
-        team1 = allRobots[numberRobot];
-        console.log(`${numberRobot}`)
-        firstRobot = document.getElementById(numberRobot)
-        let robotData = document.getElementById("data" + 1);
-        firstRobot.onclick = "";
-        firstRobot.classList.add("Selected_Robot");
-        robotData.innerHTML = `${team1.fabrication}`;
-
-    } else if (team2 == "") {
-        team2 = allRobots[numberRobot];
-        secondRobot = document.getElementById(numberRobot)
-        robotData = document.getElementById("data" + 2);
-        secondRobot.onclick = "";
-        secondRobot.classList.add("Selected_Robot");
-        robotData.innerHTML = `${team2.fabrication}`;
-
-        setTimeout(() => {
-            playButton.innerHTML = `<div class="play_button" alt="Click here to play" onclick="switchScreen(4)">PLAY</div>`;
-        }, 666);
-
-    }
-}
-
-// inGameDisplay is a constant that will update our stats in-game, setting every image that we need and everything we need to show on screen.
-
-const inGameDisplay = () => {
-
-    document.getElementById("red_start_screen").style.display = "none";
-
-    robotDisplay_team1.innerHTML = `<div class="container_robot" id="robot_movement_team1">
-    <div class="container_robot_symbol">
-        <div class="container_robot_symbol_top">
-            <div class="container_robot_symbol_1" id="robot_${team1.fabrication}_1"></div>
-            <div class="container_robot_symbol_2" id="robot_${team1.fabrication}_2"></div>
-            <div class="container_robot_symbol_3" id="robot_${team1.fabrication}_3"></div>
-        </div>
-        <div class="container_robot_symbol_mid">
-            <div class="container_robot_symbol_4" id="robot_${team1.fabrication}_4"></div>
-            <div class="container_robot_symbol_5" id="robot_${team1.fabrication}_5"></div>
-            <div class="container_robot_symbol_6" id="robot_${team1.fabrication}_6"></div>
-        </div>
-        <div class="container_robot_symbol_bot">
-            <div class="container_robot_symbol_7" id="robot_${team1.fabrication}_7"></div>
-            <div class="container_robot_symbol_8" id="robot_${team1.fabrication}_8"></div>
-            <div class="container_robot_symbol_9" id="robot_${team1.fabrication}_9"></div>
-        </div>
-    </div>
-    <div class="container_robot_upperpart">
-        <div class="container_robot_upperpart_1">
-        </div>
-        <div class="container_robot_upperpart_2">
-            <div class="container_robot_upperpart_2_1">
-                <div class="container_robot_upperpart_2_1_1">
-                </div>
-                <div class="container_robot_upperpart_2_1_2">
-                    <div class="container_robot_upperpart_2_1_2_1">
-                    </div>
-                    <div class="container_robot_upperpart_2_1_2_2">
-                        <div class="container_robot_upperpart_2_1_2_2_1">
-                        </div>
-                        <div class="container_robot_upperpart_2_1_2_2_2">
-                        </div>
-                        <div class="container_robot_upperpart_2_1_2_2_3">
-                        </div>
-                    </div>
-                    <div class="container_robot_upperpart_2_1_2_3">
-                        <div class="container_robot_upperpart_2_1_2_3_1">
-                        </div>
-                        <div class="container_robot_upperpart_2_1_2_3_2">
-                        </div>
-                        <div class="container_robot_upperpart_2_1_2_3_3">
-                        </div>
-                    </div>
-                </div>
-                <div class="container_robot_upperpart_2_1_3">
-                </div>
-            </div>
-            <div class="container_robot_upperpart_2_2">
-                <div class="container_robot_upperpart_2_2_1"></div>
-                <div class="container_robot_upperpart_2_2_2"></div>
-                <div class="container_robot_upperpart_2_2_3"></div>
-            </div>
-            <div class="container_robot_upperpart_2_3">
-            </div>
-        </div>
-        <div class="container_robot_upperpart_3">
-        </div>
-    </div>
-    <div class="container_robot_groundpart">
-        <div class="container_robot_groundpart_1">
-        </div>
-        <div class="container_robot_groundpart_2">
-            <div class="container_robot_groundpart_2_1">
-            </div>
-            <div class="container_robot_groundpart_2_2">
-            </div>
-            <div class="container_robot_groundpart_2_3">
-            </div>
-        </div>
-        <div class="container_robot_groundpart_3">
-        </div>
-    </div>`;
-    statsDisplay_team1.innerHTML = `<div class="stats_container">
-    <div class="stats_container_rows">
-    <div class="stats_fabrication">NAME</div>
-    </div>
-    <div class="stats_container_rows">
-    <div class="stats_fabrication">${team1.fabrication}</div>
-    </div>
-    </div>`;
-    robotDisplay_team2.innerHTML = `<div class="container_robot" id="robot_movement_team2">
-    <div class="container_robot_symbol">
-        <div class="container_robot_symbol_top">
-            <div class="container_robot_symbol_1" id="robot_${team2.fabrication}_1"></div>
-            <div class="container_robot_symbol_2" id="robot_${team2.fabrication}_2"></div>
-            <div class="container_robot_symbol_3" id="robot_${team2.fabrication}_3"></div>
-        </div>
-        <div class="container_robot_symbol_mid">
-            <div class="container_robot_symbol_4" id="robot_${team2.fabrication}_4"></div>
-            <div class="container_robot_symbol_5" id="robot_${team2.fabrication}_5"></div>
-            <div class="container_robot_symbol_6" id="robot_${team2.fabrication}_6"></div>
-        </div>
-        <div class="container_robot_symbol_bot">
-            <div class="container_robot_symbol_7" id="robot_${team2.fabrication}_7"></div>
-            <div class="container_robot_symbol_8" id="robot_${team2.fabrication}_8"></div>
-            <div class="container_robot_symbol_9" id="robot_${team2.fabrication}_9"></div>
-        </div>
-    </div>
-    <div class="container_robot_upperpart">
-        <div class="container_robot_upperpart_1">
-        </div>
-        <div class="container_robot_upperpart_2">
-            <div class="container_robot_upperpart_2_1">
-                <div class="container_robot_upperpart_2_1_1">
-                </div>
-                <div class="container_robot_upperpart_2_1_2">
-                    <div class="container_robot_upperpart_2_1_2_1">
-                    </div>
-                    <div class="container_robot_upperpart_2_1_2_2">
-                        <div class="container_robot_upperpart_2_1_2_2_1">
-                        </div>
-                        <div class="container_robot_upperpart_2_1_2_2_2">
-                        </div>
-                        <div class="container_robot_upperpart_2_1_2_2_3">
-                        </div>
-                    </div>
-                    <div class="container_robot_upperpart_2_1_2_3">
-                        <div class="container_robot_upperpart_2_1_2_3_1">
-                        </div>
-                        <div class="container_robot_upperpart_2_1_2_3_2">
-                        </div>
-                        <div class="container_robot_upperpart_2_1_2_3_3">
-                        </div>
-                    </div>
-                </div>
-                <div class="container_robot_upperpart_2_1_3">
-                </div>
-            </div>
-            <div class="container_robot_upperpart_2_2">
-                <div class="container_robot_upperpart_2_2_1"></div>
-                <div class="container_robot_upperpart_2_2_2"></div>
-                <div class="container_robot_upperpart_2_2_3"></div>
-            </div>
-            <div class="container_robot_upperpart_2_3">
-            </div>
-        </div>
-        <div class="container_robot_upperpart_3">
-        </div>
-    </div>
-    <div class="container_robot_groundpart">
-        <div class="container_robot_groundpart_1">
-        </div>
-        <div class="container_robot_groundpart_2">
-            <div class="container_robot_groundpart_2_1">
-            </div>
-            <div class="container_robot_groundpart_2_2">
-            </div>
-            <div class="container_robot_groundpart_2_3">
-            </div>
-        </div>
-        <div class="container_robot_groundpart_3">
-        </div>
-    </div>`;
-    statsDisplay_team2.innerHTML = `<div class="stats_container">
-    <div class="stats_container_rows">
-    <div class="stats_fabrication">NAME</div>
-    </div>
-    <div class="stats_container_rows">
-    <div class="stats_fabrication">${team2.fabrication}</div>
-    </div>
-    </div>`;
-};
-
-// InGame action buttons
-
-// MOVEMENT 
-
-const move1 = () => {
-
-    if (team1.meters >= total_meters) {
-
-        winner = team1;
-        winner_show.innerHTML = `the winner is... <br>
-        ${team1.fabrication}`;
-
-        setTimeout(() => {
-            switchScreen(5);
-        }, 1200);
-
-    } else {
-
-        team1.accelerate();
-        team1.move_up();
-
-        document.getElementById("robot_team1").style.paddingBottom = `${team1.movement}` + "em";
+        this.position = {
+            x: position.x,
+            y: position.y
+        },
+        this.radius = radius,
+        this.color = color
         
-    };
+    }
+     
+    create() {
+            
+       ctx.fillStyle = this.color
+       ctx.fillRect(this.position.x, this.position.y, this.radius, this.radius);
 
-    
+    }
 
-    meters1_show.innerHTML = `<p>${team1.meters}</p>`;
-    console.log(`team 1 movement is ${team1.movement}`)
-    console.log(`team 1 reached ${team1.meters} meters`)
-    console.log(`the winner is ${winner}`)
+    update() {
+        this.create()
+    }
 }
 
-const move2 = () => {
+const robot_1 = new Robot({
+    position: {
+        x: 0,
+        y: 0
+    },
+    radius : 50,
+    color : "blue"
+    }
 
-    if (team2.meters >= total_meters) {
+);
 
-        winner = team2;
 
-        switchScreen(5);
+robot_1.create()
 
-        winner_show.innerHTML = `the winner is... <br>
-        ${team2.fabrication}`;
+console.log(robot_1)
+
+
+let lastkey
+
+let movements = []
+let maxMovements = 6
+const interfaceSlots = {
+1: document.getElementById("moveSlot1"),
+2: document.getElementById("moveSlot2"),
+3: document.getElementById("moveSlot3"),
+4: document.getElementById("moveSlot4"),
+5: document.getElementById("moveSlot5"),
+6: document.getElementById("moveSlot6"),
+}
+
+const setMovement = (direction) => {
+    let imageUrl
+
+    switch (direction) {
+        case 1:
+            imageUrl = "../assets/img/up.svg"
+            break;
+        case 2:
+            imageUrl = "../assets/img/down.svg"
+
+            break;
+        case 3:
+            imageUrl = "../assets/img/left.svg"
+
+            break;
+
+        case 4:
+            imageUrl = "../assets/img/right.svg"
+            break;
+
+        default:
+            break;
+    }
+
+        if(movements.length < maxMovements){ 
+            movements.push(direction)
+
+            interfaceSlots[movements.length].style.backgroundImage = `url(${imageUrl})`
+            
+        }else{
+            console.log("movements maxed", movements.length)
+        }
+        console.log(movements)
+}
+
+const executeMovement = () => {
+    if(movements.length === maxMovements){
+        // console.log(movements)
+        for (let i = 0; i < movements.length; i++) {
+            setTimeout(() => {
+                // console.log("moving...", interfaceSlots[i+1])
+                interfaceSlots[i+1].style.backgroundColor = "green"
+                if(interfaceSlots[i]){
+                    interfaceSlots[i].style.backgroundColor = "transparent"
+                    interfaceSlots[i].style.backgroundImage = "none"
+                }
+                switch (movements[i]) {
+                    case 1:
+                        if (robot_1.position.y > 0) {
+                            robot_1.position.y += -robot_1.radius
+                        }
+                        break;
+            
+                    case 2:
+                        if (robot_1.position.y < canvas.height - robot_1.radius) {
+                            robot_1.position.y += robot_1.radius
+                        }
+                        break;
+            
+                    case 3:
+                        if (robot_1.position.x > 0) {
+                            robot_1.position.x += -robot_1.radius
+                        }
+                        break;
+            
+                    case 4:
+                        if (robot_1.position.x < canvas.width - robot_1.radius) {
+                            robot_1.position.x += robot_1.radius
+                        }
+                        break;
+            
+                    default:
+                        break;   //  your code here
+                    }
+            }, i*750);
+        }
 
         setTimeout(() => {
-            switchScreen(5);
-        }, 1200);
+            interfaceSlots[movements.length].style.backgroundColor = "transparent"
+            interfaceSlots[movements.length].style.backgroundImage = "none"
+            movements = []
+       
 
-    } else {
-
-        team2.accelerate();
-        team2.move_up();
-
-        document.getElementById("robot_team2").style.paddingBottom = `${team2.movement}` + "em";
-
-    };
-
-    meters2_show.innerHTML = `<p>${team2.meters}</p>`;
-    console.log(`team 2 reached ${team2.meters} meters`);
-    console.log(`the winner is... ${winner}`);
+        }, (movements.length)*750);
+       
+    }else console.log("you need to have at least 6 movements")
 }
 
-// HEALING
 
-const healing1 = () => {
+const animate = () => {
+    window.requestAnimationFrame(animate)
+    ctx.fillStyle = "black"
 
-    if (team1.energy <= 0) {
-
-        console.log(`consolelog ha entrado en el if ${team1.energy}`)
-        winner = team2;
-        winner_show.innerHTML = `the winner is... <br>
-        ${team2.fabrication}`;
-
-        setTimeout(() => {
-            switchScreen(5);
-        }, 1200);
-
-    } else {
-
-        console.log(`consolelog else ${team1.energy}`)
-        team1.heal();
-    };
-
-    energy1_show.innerHTML = `<p>${team1.energy}</p>`;
-
-    console.log(`energy team 1 is ${team1.energy}`)
-    console.log(`the winner is ${winner}`)
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+    robot_1.update()
 
 }
 
-const healing2 = () => {
-
-    if (team1.energy <= 0) {
-
-        winner = team1;
-        winner_show.innerHTML = `the winner is... <br>
-        ${team2.fabrication}`;
-
-        setTimeout(() => {
-            switchScreen(5);
-        }, 1200);
-
-    } else {
-
-        team2.heal();
-    };
-
-    energy2_show.innerHTML = `<p>${team2.energy}</p>`;
-
-    console.log(`energy team 2 is ${team2.energy}`)
-    console.log(`the winner is ${winner}`)
-}
-
-// ATTACK
-
-const shooting1 = () => {
-
-    if (team2.energy > 0) {
-
-        team2.take_damage();
-
-        energy2_show.innerHTML = `<p>${team2.energy}</p>`;
-
-    } else {
-
-        winner = team1;
-
-        winner_show.innerHTML = `the winner is... <br>
-        ${team1.fabrication}`;
-
-        setTimeout(() => {
-            switchScreen(5);
-        }, 1200);
-    };
-
-    console.log(`energy team 2 is ${team2.energy}`)
-    console.log(`the winner is ${winner}`)
-
-}
-
-const shooting2 = () => {
-
-    if (team1.energy > 0) {
-
-        team1.take_damage();
-
-        energy1_show.innerHTML = `<p>${team1.energy}</p>`;
-
-    } else {
-
-        winner = team2;
-
-        winner_show.innerHTML = `the winner is... <br>
-        ${team1.fabrication}`;
-
-        setTimeout(() => {
-            switchScreen(5);
-        }, 1200);
-    };
-
-    console.log(`energy team 1 is ${team1.energy}`)
-    console.log(`the winner is ${winner}`)
-}
-
-// KIDNAPPING HTML ELEMENTS
-
-let playButton = document.getElementById("play_button_indicator");
-let robotDisplay_team1 = document.getElementById("robot_team1");
-let robotDisplay_team2 = document.getElementById("robot_team2");
-let statsDisplay_team1 = document.getElementById("stats_team1");
-let statsDisplay_team2 = document.getElementById("stats_team2");
-let startDisplay = document.getElementById("red_start_screen");
-let winner_show = document.getElementById("winner_id");
-let meters1_show = document.getElementById("meters1_show");
-let meters2_show = document.getElementById("meters2_show");
-let energy1_show = document.getElementById("energy1_show");
-let robot_movement_team1 = document.getElementById("robot_movement_team1");
-let robot_movement_team2 = document.getElementById("robot_movement_team2")
+animate()
