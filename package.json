@@ -1,0 +1,21 @@
+{
+  "name": "robostrike_videogame",
+  "version": "1.0.0",
+  "description": "Cuando era un niño, uno de mis primeros contactos con el mundo de los videojuegos fue gracias a Robostrike.\r Robostrike era un juego hecho en java y al que accedías desde el navegador. Consistía en un conjunto de robots\r en un tablero los cuales realizaban un total de 8 acciones que tú mismo dictabas en cada turno. Ganabas al derrotar \r a los demás oponentes.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suku60/robostrike_videogame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suku60/robostrike_videogame/issues"
+  },
+  "homepage": "https://github.com/suku60/robostrike_videogame#readme"
+}
