@@ -1,3 +1,5 @@
+##### CURRENTLY ON DEVELOPMENT OF VERSION 2.0
+
 ## PROJECT: ROBOSTRIKE 
 
 ### Descripción del proyecto // _Proyect description_
