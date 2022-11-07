@@ -16,6 +16,9 @@ let robotPosition = {
     y: 0
 }
 
+base_image = new Image();
+  base_image.src = './assets/img/tank.svg';
+  
 class Robot {
 
     constructor({position, radius, color}) {
@@ -28,12 +31,16 @@ class Robot {
         this.color = color
         
     }
-     
+    
+
     create() {
             
        ctx.fillStyle = this.color
-       ctx.fillRect(this.position.x, this.position.y, this.radius, this.radius);
+       ctx.clearRect(this.position.x, this.position.y, this.radius, this.radius);
 
+    
+    // ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(base_image, this.position.x, this.position.y, this.radius, this.radius);
     }
 
     update() {
