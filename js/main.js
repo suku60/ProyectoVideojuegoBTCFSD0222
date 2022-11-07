@@ -76,18 +76,18 @@ const setMovement = (direction) => {
 
     switch (direction) {
         case 1:
-            imageUrl = "assets/img/up.svg"
+            imageUrl = "./assets/img/up.svg"
             break;
         case 2:
-            imageUrl = "assets/img/down.svg"
+            imageUrl = "./assets/img/down.svg"
             break;
         case 3:
-            imageUrl = "assets/img/left.svg"
+            imageUrl = "./assets/img/left.svg"
             console.log(imageUrl)
             break;
 
         case 4:
-            imageUrl = "assets/img/right.svg"
+            imageUrl = "./assets/img/right.svg"
             break;
 
         default:
