@@ -76,19 +76,18 @@ const setMovement = (direction) => {
 
     switch (direction) {
         case 1:
-            imageUrl = "../assets/img/up.svg"
+            imageUrl = "/assets/img/up.svg"
             break;
         case 2:
-            imageUrl = "../assets/img/down.svg"
-
+            imageUrl = "/assets/img/down.svg"
             break;
         case 3:
-            imageUrl = "../assets/img/left.svg"
-
+            imageUrl = "/assets/img/left.svg"
+            console.log(imageUrl)
             break;
 
         case 4:
-            imageUrl = "../assets/img/right.svg"
+            imageUrl = "/assets/img/right.svg"
             break;
 
         default:
@@ -108,10 +107,8 @@ const setMovement = (direction) => {
 
 const executeMovement = () => {
     if(movements.length === maxMovements){
-        // console.log(movements)
         for (let i = 0; i < movements.length; i++) {
             setTimeout(() => {
-                // console.log("moving...", interfaceSlots[i+1])
                 interfaceSlots[i+1].style.backgroundColor = "green"
                 if(interfaceSlots[i]){
                     interfaceSlots[i].style.backgroundColor = "transparent"
