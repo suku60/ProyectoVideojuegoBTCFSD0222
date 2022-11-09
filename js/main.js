@@ -1,6 +1,8 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
+const tankCtx = canvas.getContext("2d");
 const gameScreen = document.getElementById("gameScreen");
+const deployUrl = "http://127.0.0.1:5500/"
 
 const height = 750;
 const width = 1150;
@@ -16,32 +18,46 @@ let robotPosition = {
     y: 0
 }
 
-base_image = new Image();
-  base_image.src = './assets/img/tank.svg';
-  
+// let base_image = new Image();
+// base_image.src = 'assets/img/tank.svg';
+
+// const rotateSprite = () => {
+// let initialSprite = base_image.src
+// console.log("working, ", initialSprite)
+// }
+
+// console.log(rotateSprite())
+
+const sprites = {
+up: 'assets/img/tank.svg',
+down: 'assets/img/tank.svg',
+left: 'assets/img/tank.svg',
+right: 'assets/img/tank.svg'
+}
+
 class Robot {
 
-    constructor({position, radius, color}) {
+    constructor({position, radius, imageSrc}) {
 
         this.position = {
             x: position.x,
             y: position.y
         },
         this.radius = radius,
-        this.color = color
+        this.imageSrc = new Image()
+        this.imageSrc.src = deployUrl+imageSrc
         
     }
     
 
     create() {
-            
-       ctx.fillStyle = this.color
-       ctx.clearRect(this.position.x, this.position.y, this.radius, this.radius);
 
-    
-    // ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(base_image, this.position.x, this.position.y, this.radius, this.radius);
+       tankCtx.fillStyle = this.color 
+    //    console.log(this.imageSrc.src)  
+       tankCtx.drawImage(this.imageSrc, this.position.x, this.position.y, this.radius, this.radius);
+    //    tankCtx.rotate(degrees*Math.PI/180)
     }
+
 
     update() {
         this.create()
@@ -54,15 +70,17 @@ const robot_1 = new Robot({
         y: 0
     },
     radius : 50,
-    color : "blue"
+    imageSrc : 'assets/img/tankNorth.svg'
     }
 
 );
 
+// console.log(robot_1)
+
 
 robot_1.create()
 
-console.log(robot_1)
+// console.log(robot_1)
 
 
 let lastkey
@@ -79,24 +97,28 @@ const interfaceSlots = {
 }
 
 const setMovement = (direction) => {
+    // console.log(direction)
     let imageUrl
 
     switch (direction) {
         case 1:
-            imageUrl = "./assets/img/up.svg"
+            imageUrl = "assets/img/up.svg"
             break;
         case 2:
-            imageUrl = "./assets/img/down.svg"
+            imageUrl = "assets/img/down.svg"
             break;
         case 3:
-            imageUrl = "./assets/img/left.svg"
-            console.log(imageUrl)
+            imageUrl = "assets/img/left.svg"
             break;
-
         case 4:
-            imageUrl = "./assets/img/right.svg"
+            imageUrl = "assets/img/right.svg"
             break;
-
+        case 5:
+            imageUrl = "assets/img/toLeft.svg"
+            break;
+        case 6:
+            imageUrl = "assets/img/toRight.svg"
+            break;
         default:
             break;
     }
@@ -109,18 +131,22 @@ const setMovement = (direction) => {
         }else{
             console.log("movements maxed", movements.length)
         }
-        console.log(movements)
+        // console.log(movements)
 }
 
 const executeMovement = () => {
+    // console.log(movements)
+    // console.log(robot_1.imageSrc)
+
     if(movements.length === maxMovements){
         for (let i = 0; i < movements.length; i++) {
             setTimeout(() => {
-                interfaceSlots[i+1].style.backgroundColor = "green"
+                interfaceSlots[i+1].style.backgroundColor = "var(--clr-main-morning-blue)"
                 if(interfaceSlots[i]){
                     interfaceSlots[i].style.backgroundColor = "transparent"
                     interfaceSlots[i].style.backgroundImage = "none"
                 }
+                console.log(movements[i])
                 switch (movements[i]) {
                     case 1:
                         if (robot_1.position.y > 0) {
@@ -145,24 +171,65 @@ const executeMovement = () => {
                             robot_1.position.x += robot_1.radius
                         }
                         break;
-            
+                        // 5 will be turning left, 6 will be right
+                        case 5:
+                        case 6:
+                        console.log(robot_1.imageSrc.src)
+                        console.log(deployUrl+"assets/img/tankNorth.svg")
+                        console.log(robot_1.imageSrc.src === deployUrl+"assets/img/tankNorth.svg")
+                        switch (robot_1.imageSrc.src) {
+                                case deployUrl+"assets/img/tankNorth.svg":
+                                    console.log("entro 1")
+                                    console.log(movements[i])
+                                    if(movements[i] === 5){
+                                        console.log("entro 2")
+                                        robot_1.imageSrc.src = "assets/img/tankWest.svg"
+                                        console.log(robot_1.imageSrc.src)
+                                    }else{
+                                        console.log("entro 3")
+                                        robot_1.imageSrc.src = "assets/img/tankEast.svg"
+                                    }
+                            break;
+                                case deployUrl+"assets/img/tankSouth.svg":
+                                    if(movements[i] === 5){
+                                        robot_1.imageSrc.src = "assets/img/tankEast.svg"
+                                    }else{
+                                        robot_1.imageSrc.src = "assets/img/tankWest.svg"
+                                    }
+                            break;
+                                case deployUrl+"assets/img/tankWest.svg":
+                                    if(movements[i] === 5){
+                                        robot_1.imageSrc.src = "assets/img/tankSouth.svg"
+                                    }else{
+                                        robot_1.imageSrc.src = "assets/img/tankNorth.svg"
+                                    }                                    
+                            break;
+                                case deployUrl+"assets/img/tankEast.svg":
+                                    if(movements[i] === 5){
+                                        robot_1.imageSrc.src = "assets/img/tankNorth.svg"
+                                    }else{
+                                        robot_1.imageSrc.src = "assets/img/tankSouth.svg"
+                                    }                                    
+                            break;
+                            default:
+                                break;
+                        }
+                        break;
                     default:
                         break;   //  your code here
                     }
             }, i*750);
         }
-
+        // console.log(robot_1)
         setTimeout(() => {
             interfaceSlots[movements.length].style.backgroundColor = "transparent"
             interfaceSlots[movements.length].style.backgroundImage = "none"
             movements = []
        
-
         }, (movements.length)*750);
        
     }else console.log("you need to have at least 6 movements")
 }
-
 
 const animate = () => {
     window.requestAnimationFrame(animate)

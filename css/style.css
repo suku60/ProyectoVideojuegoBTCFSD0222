@@ -9,14 +9,25 @@
 
 :root {
     /* MAIN COLORS */
-    --color--main-1: #c7b7d8;
-    --color--main-2: #CABFD6;
-    --color--main-3: #7A7B91;
-    --color--main-4: #5E5A6B;
-    --color-detail-1: #AE6AE6;
-    --color-detail-2: #995D93;
-    --color-detail-3: #E3BFE1;
-    --color-detail-4: #B4D6D3;
+    --clr-main-snow-0: hsl(15, 50%, 77%, .5);    
+    --clr-main-snow: hsl(15, 50%, 97%);
+    --clr-main-snow-darken: hsl(15, 50%, 77%);
+
+    --clr-main-morning-blue-0: hsl(153, 15%, 41%, .5);   
+    --clr-main-morning-blue: hsl(153, 15%, 61%);
+     --clr-main-morning-blue-darken: hsl(153, 15%, 41%);
+
+     --clr-main-dark-byzantium-0: hsl(317, 31%, 5%, .5);   
+    --clr-main-dark-byzantium: hsl(317, 31%, 25%);
+     --clr-main-dark-byzantium-darken: hsl(317, 31%, 5%);
+
+     --clr-main-claret-0: hsl(343, 88%, 6%, .5);   
+    --clr-main-claret: hsl(343, 88%, 26%);
+     --clr-main-claret-darken: hsl(343, 88%, 6%);
+
+     --clr-main-smoky-black-0: hsl(0, 3%, 0%, .5);   
+    --clr-main-smoky-black: hsl(0, 3%, 6%);
+     --clr-main-smoky-black-darken: hsl(0, 3%, 0%);
 
     /* vitamin */
     --color-vitamin-light: #1b92dc;
@@ -49,7 +60,7 @@
 }
 
 body {
-    background-color: var(--color--main-4);
+    background-color: var(--clr-main-smoky-black);
 
     height: 100vh;
     width: 100vw;
@@ -72,44 +83,52 @@ body {
 }
 
 .controlsGrid {
-    background-color: red;
+    background-color: transparent;
 
     position: absolute;
     z-index: 200;
-    bottom: 0px;
+    bottom: 10px;
     left: 0px;
 
-    height: 60px;
+    height: 90px;
     width: 90px;
+
+    /* margin: .5rem; */
 
     display: grid;
     grid-template-columns: 30px 30px 30px;
-    grid-template-rows: 30px 30px;
+    grid-template-rows: 30px 30px 30px;
 
 }
 
 .controlsGrid > div {
-    background-color: blue;
-    height: 30px;
-    width: 30px;
+    background-color: var(--clr-main-dark-byzantium);
+    color: var(--clr-main-snow-darken);
+    height: 28px;
+    width: 28px;
 
     border: none;
+    border-radius: .5rem;
     cursor: pointer;
-    content: "->";
 
     display: grid;
     place-items: center;
 
     font-size: 10px;
+    transition: .1s;
 }
 
 .controlsGrid > div:hover {
 
-    background-color: rgb(21, 21, 160);
+    background-color:var(--clr-main-dark-byzantium-darken);
+    color: var(--clr-main-snow);
+
+    border: .1rem solid var(--clr-main-smoky-black-0);
+    transition: .15s;
 }
 
 .directionsGrid {
-    background-color: red;
+    background-color: var(--clr-main-morning-blue-darken);
 
     position: absolute;
     z-index: 200;
@@ -122,15 +141,25 @@ body {
     display: grid;
     grid-template-columns: 30px 30px 30px 30px 30px 30px;
     grid-template-rows: 30px;
+    align-items: center;
+    justify-content: center;
 
 }
 .directionsGrid > div {
 
-    height: 26px;
-    width: 26px;
+    height: 23px;
+    width: 23px;
+    /* max-width: 26px; */
     margin: 2px;
 
     background-color: transparent;
+
+    border-radius: .5rem;
+    /* padding: 2rem; */
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
 
     /* background-image: url(../assets/img/left.svg); */
 }
