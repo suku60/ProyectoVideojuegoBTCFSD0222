@@ -174,41 +174,45 @@ const executeMovement = () => {
                         // 5 will be turning left, 6 will be right
                         case 5:
                         case 6:
+                        // console.log(robot_1.imageSrc.src)
+                        // console.log(deployUrl+"assets/img/tankNorth.svg")
                         console.log(robot_1.imageSrc.src)
                         console.log(deployUrl+"assets/img/tankNorth.svg")
-                        console.log(robot_1.imageSrc.src === deployUrl+"assets/img/tankNorth.svg")
+                        console.log(deployUrl+"assets/img/tankEast.svg")
+                        console.log(deployUrl+"assets/img/tankWest.svg")
+                        console.log(deployUrl+"assets/img/tankSouth.svg")
                         switch (robot_1.imageSrc.src) {
                                 case deployUrl+"assets/img/tankNorth.svg":
                                     console.log("entro 1")
                                     console.log(movements[i])
                                     if(movements[i] === 5){
                                         console.log("entro 2")
-                                        robot_1.imageSrc.src = "assets/img/tankWest.svg"
+                                        robot_1.imageSrc.src = deployUrl+"assets/img/tankWest.svg"
                                         console.log(robot_1.imageSrc.src)
                                     }else{
                                         console.log("entro 3")
-                                        robot_1.imageSrc.src = "assets/img/tankEast.svg"
+                                        robot_1.imageSrc.src = deployUrl+"assets/img/tankEast.svg"
                                     }
                             break;
                                 case deployUrl+"assets/img/tankSouth.svg":
                                     if(movements[i] === 5){
-                                        robot_1.imageSrc.src = "assets/img/tankEast.svg"
+                                        robot_1.imageSrc.src = deployUrl+"assets/img/tankEast.svg"
                                     }else{
-                                        robot_1.imageSrc.src = "assets/img/tankWest.svg"
+                                        robot_1.imageSrc.src = deployUrl+"assets/img/tankWest.svg"
                                     }
                             break;
                                 case deployUrl+"assets/img/tankWest.svg":
                                     if(movements[i] === 5){
-                                        robot_1.imageSrc.src = "assets/img/tankSouth.svg"
+                                        robot_1.imageSrc.src = deployUrl+"assets/img/tankSouth.svg"
                                     }else{
-                                        robot_1.imageSrc.src = "assets/img/tankNorth.svg"
+                                        robot_1.imageSrc.src = deployUrl+"assets/img/tankNorth.svg"
                                     }                                    
                             break;
                                 case deployUrl+"assets/img/tankEast.svg":
                                     if(movements[i] === 5){
-                                        robot_1.imageSrc.src = "assets/img/tankNorth.svg"
+                                        robot_1.imageSrc.src = deployUrl+"assets/img/tankNorth.svg"
                                     }else{
-                                        robot_1.imageSrc.src = "assets/img/tankSouth.svg"
+                                        robot_1.imageSrc.src = deployUrl+"assets/img/tankSouth.svg"
                                     }                                    
                             break;
                             default:
