@@ -93,12 +93,9 @@ body {
     height: 90px;
     width: 90px;
 
-    /* margin: .5rem; */
-
     display: grid;
     grid-template-columns: 30px 30px 30px;
     grid-template-rows: 30px 30px 30px;
-
 }
 
 .controlsGrid > div {
@@ -115,7 +112,7 @@ body {
     place-items: center;
 
     font-size: 10px;
-    transition: .1s;
+    transition: .05s;
 }
 
 .controlsGrid > div:hover {
@@ -124,7 +121,12 @@ body {
     color: var(--clr-main-snow);
 
     border: .1rem solid var(--clr-main-smoky-black-0);
-    transition: .15s;
+    transition: .05s;
+}
+
+
+.controlsGridArrow {
+    height: 20px;
 }
 
 .directionsGrid {
@@ -143,29 +145,23 @@ body {
     grid-template-rows: 30px;
     align-items: center;
     justify-content: center;
-
 }
 .directionsGrid > div {
-
     height: 23px;
     width: 23px;
-    /* max-width: 26px; */
     margin: 2px;
 
     background-color: transparent;
 
     border-radius: .5rem;
-    /* padding: 2rem; */
     background-size: contain;
     background-repeat: no-repeat;
 
     overflow: hidden;
-
-    /* background-image: url(../assets/img/left.svg); */
 }
 
-.interface {
 
+.interface {
     position: relative;
     
     height: 750px;
