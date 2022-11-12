@@ -25,16 +25,12 @@ class Robot {
         this.imageSrc = new Image()
         this.imageSrc.src = deployUrl+imageSrc
         this.imageSrc.style.fill = "red"
-        
     }
     
 
     create() {
-
        tankCtx.fillStyle = this.color 
        tankCtx.drawImage(this.imageSrc, this.position.x, this.position.y, this.radius, this.radius);
-       console.log(this.imageSrc)
-
     }
 
 
@@ -54,13 +50,7 @@ const robot_1 = new Robot({
 
 );
 
-// console.log(robot_1)
-
-
 robot_1.create()
-
-// console.log(robot_1)
-
 
 let lastkey
 
@@ -110,10 +100,8 @@ const setMovement = (direction) => {
         }else{
             console.log("movements maxed", movements.length)
         }
-        // console.log(movements)
 }
 
-// improving executeMovement based on image 
 const executeMovement2 = () => {
     if(movements.length === maxMovements){
         for (let i = 0; i < movements.length; i++) {
@@ -242,7 +230,6 @@ const executeMovement2 = () => {
             }
             }, i*750);
         }
-        // console.log(robot_1)
         setTimeout(() => {
             interfaceSlots[movements.length].style.backgroundColor = "transparent"
             interfaceSlots[movements.length].style.backgroundImage = "none"
@@ -266,3 +253,4 @@ const animate = () => {
 }
 
 animate()
+
